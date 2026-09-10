@@ -12,6 +12,21 @@ Read the table as: *when a problem says this → reach for that.*
 
 ---
 
+## Short on time? These eight first
+
+The highest-frequency set — they cover a large share of real interview
+questions, and each has a template below:
+
+`Sliding Window` · `Subsets/Backtracking` · `Modified Binary Search` ·
+`Top K (heap)` · `Tree DFS` · `Tree BFS` · `Topological Sort` · `Two Pointers`
+
+Worth knowing what that set *leaves out*, though: **hashing** (module 01, which
+is more common than any of them) and **dynamic programming** (13–14, which is
+where interviews get hard). The eight are the fastest way to become competent.
+They are not the whole job.
+
+---
+
 ## Trigger → Pattern
 
 | The problem says... | Reach for | Module |
@@ -20,6 +35,7 @@ Read the table as: *when a problem says this → reach for that.*
 | input is **sorted**, find a pair/triplet | **two pointers** | 02 |
 | "longest/shortest **contiguous** subarray or substring" | **sliding window** | 03 |
 | "matching", "nearest previous greater", "valid parentheses" | **stack** | 04 |
+| "level order", "depth of", "shortest path" in a tree | **BFS with a queue** | 07 |
 | sorted input, or "minimize the maximum" | **binary search** | 05 |
 | "middle of list", "does it cycle", "reverse the list" | **fast/slow pointers** | 06 |
 | anything with a tree | **DFS recursion**, or BFS for levels | 07 |
@@ -73,8 +89,37 @@ while lo <= hi:                   # <= , and hi is INCLUSIVE
     else: hi = mid - 1
 return -1
 ```
-*Binary search on the answer:* when asked to "minimize the maximum", binary
-search over the **answer range**, and write a `feasible(x) -> bool` helper.
+### Modified binary search (rotated sorted array)
+```python
+lo, hi = 0, len(nums) - 1
+while lo <= hi:
+    mid = (lo + hi) // 2
+    if nums[mid] == target: return mid
+    if nums[lo] <= nums[mid]:                 # LEFT half is sorted
+        if nums[lo] <= target < nums[mid]: hi = mid - 1
+        else:                              lo = mid + 1
+    else:                                     # RIGHT half is sorted
+        if nums[mid] < target <= nums[hi]: lo = mid + 1
+        else:                              hi = mid - 1
+return -1
+```
+The insight: after a rotation **at least one half is still sorted**. Work out
+which, then ask whether the target lies inside that sorted half. If yes, go
+there; if no, go the other way.
+
+### Binary search on the answer
+When the ask is "minimize the maximum" or "find the smallest X that works",
+binary search the **answer range**, not the array. Write a `feasible()` helper.
+```python
+def feasible(x) -> bool: ...          # can we do it with x?
+
+lo, hi = <smallest possible>, <largest possible>
+while lo < hi:                        # note: <  and hi = mid (not mid - 1)
+    mid = (lo + hi) // 2
+    if feasible(mid): hi = mid        # works — try smaller
+    else:             lo = mid + 1    # doesn't — must go bigger
+return lo
+```
 
 ### BFS (shortest path in an unweighted graph / grid)
 ```python
@@ -104,6 +149,29 @@ def dfs(r, c):
         dfs(r + dr, c + dc)
 ```
 
+### Top K elements (heap of size k)
+```python
+import heapq
+h = []
+for n in nums:
+    heapq.heappush(h, n)
+    if len(h) > k:
+        heapq.heappop(h)       # evict the smallest -> h keeps the k LARGEST
+return h
+```
+Counter-intuitive but the point: for the k **largest**, use a **min**-heap of
+size k, so the weakest survivor is always the one on top and cheapest to evict.
+Flip it (or negate) for the k smallest. O(n log k), better than sorting when
+k << n.
+
+```python
+# Weighted by something else? Push a tuple — it sorts by the first element.
+heapq.heappush(h, (freq, value))
+
+# And if you don't need to stream it:
+heapq.nlargest(k, nums)                   # done, no heap management
+```
+
 ### Backtracking
 ```python
 def backtrack(start, path):
@@ -124,6 +192,50 @@ def dfs(node):
     right = dfs(node.right)
     return <combine left, right, node.val>
 ```
+
+### Tree BFS (level order)
+```python
+from collections import deque
+if not root: return []
+res, q = [], deque([root])
+while q:
+    level = []
+    for _ in range(len(q)):        # snapshot the size FIRST — that's the level
+        node = q.popleft()
+        level.append(node.val)
+        if node.left:  q.append(node.left)
+        if node.right: q.append(node.right)
+    res.append(level)
+return res
+```
+`for _ in range(len(q))` is the whole trick: capture the length *before* the
+loop, so you process exactly one level even as you append the next one.
+Reach for BFS over DFS whenever the question mentions **levels, depth, or the
+shortest path**.
+
+### Topological sort (Kahn's algorithm)
+```python
+from collections import deque, defaultdict
+adj = defaultdict(list)
+indeg = [0] * n
+for node, dependency in edges:        # dependency must come BEFORE node
+    adj[dependency].append(node)
+    indeg[node] += 1
+
+q = deque([i for i in range(n) if indeg[i] == 0])   # nothing blocks these
+order = []
+while q:
+    node = q.popleft()
+    order.append(node)
+    for nxt in adj[node]:
+        indeg[nxt] -= 1               # one prerequisite satisfied
+        if indeg[nxt] == 0:           # all satisfied -> now available
+            q.append(nxt)
+return order if len(order) == n else []   # short == there was a CYCLE
+```
+Repeatedly take whatever has no unmet prerequisites. **The length check at the
+end is the cycle detection** — if you couldn't place every node, something was
+circular. Course schedules, build order, task dependencies.
 
 ### DP (1-D, bottom-up)
 ```python
