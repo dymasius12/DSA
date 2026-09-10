@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+"""./review — tells you what's decayed the most. Reads PROGRESS.md."""
+import os
+import re
+import sys
+from datetime import date
+
+ROOT = os.path.dirname(os.path.abspath(__file__))
+TODAY = date.today()
+
+
+def parse():
+    rows = []
+    with open(os.path.join(ROOT, "PROGRESS.md")) as f:
+        for line in f:
+            m = re.match(
+                r"^\|\s*(\d{2})\s*\|\s*(.+?)\s*\|\s*(\w+)\s*\|"
+                r"\s*(\S+)\s*\|\s*(\d)\s*\|", line)
+            if m:
+                num, name, status, touched, conf = m.groups()
+                days = None
+                if touched != "-":
+                    try:
+                        y, mo, d = (int(x) for x in touched.split("-"))
+                        days = (TODAY - date(y, mo, d)).days
+                    except ValueError:
+                        pass
+                rows.append((num, name, status, days, int(conf)))
+    return rows
+
+
+def main():
+    rows = parse()
+    if not rows:
+        sys.exit("Couldn't parse PROGRESS.md — did the table format change?")
+
+    started = [r for r in rows if r[2] != "todo"]
+    todo = [r for r in rows if r[2] == "todo"]
+
+    print()
+    if not started:
+        print("  Nothing logged yet. Start at README.md → Module 00.")
+        print("  Then set its row in PROGRESS.md to `learning` with today's date.\n")
+        return
+
+    # Decay score: time away, amplified by how shaky you were.
+    # Confidence 5 decays at 1x, confidence 1 decays at 5x.
+    scored = []
+    for num, name, status, days, conf in started:
+        d = days if days is not None else 999
+        scored.append((d * (6 - conf), num, name, status, d, conf))
+    scored.sort(reverse=True)
+
+    decayed = [s for s in scored if s[0] >= 14]
+    fresh = [s for s in scored if s[0] < 14]
+
+    if decayed:
+        print("  DECAYED — review these first")
+        print("  " + "-" * 58)
+        for score, num, name, status, days, conf in decayed[:5]:
+            ago = f"{days}d ago" if days < 999 else "never dated"
+            flag = "  <-- start here" if score == decayed[0][0] else ""
+            print(f"  {num} {name:<22} conf {conf}/5  {ago:>12}{flag}")
+    else:
+        print("  Nothing has decayed. Everything you've touched is fresh.")
+
+    if fresh:
+        print("\n  FRESH — leave these alone for now")
+        for score, num, name, status, days, conf in fresh[:3]:
+            print(f"  {num} {name:<22} conf {conf}/5  {days}d ago")
+
+    if todo:
+        print(f"\n  NEXT NEW MODULE: {todo[0][0]} {todo[0][1]}")
+
+    print("\n  Suggested session:")
+    if decayed and decayed[0][0] > 60:
+        worst = decayed[0]
+        print(f"    1. Read cheatsheets/ for module {worst[1]} (10 min)")
+        print(f"    2. Re-solve ONE problem from module {worst[1]}, blank file")
+        print("    3. Update its confidence honestly in PROGRESS.md")
+    elif todo:
+        print(f"    Start module {todo[0][0]} {todo[0][1]}. You're current on everything else.")
+    else:
+        print("    Everything's current. Pick a ★ problem and re-solve it cold.")
+    print()
+
+
+if __name__ == "__main__":
+    main()

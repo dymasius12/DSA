@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# ./log "did module 01 two_sum + group_anagrams" 45
+set -eu
+cd "$(dirname "$0")"
+[ $# -lt 1 ] && { echo 'usage: ./log "what I did" [minutes]'; exit 1; }
+what="$1"; mins="${2:-}"
+today=$(date +%Y-%m-%d)
+# Insert after the session-log table header separator.
+python3 - "$today" "$what" "$mins" <<'PY'
+import sys
+date, what, mins = sys.argv[1], sys.argv[2], sys.argv[3]
+lines = open("PROGRESS.md").read().split("\n")
+for i, ln in enumerate(lines):
+    if ln.startswith("|------|------------|"):
+        lines.insert(i + 1, f"| {date} | {what} | {mins} |")
+        break
+else:
+    sys.exit("couldn't find the session log table in PROGRESS.md")
+# Drop the placeholder empty row if it's still there.
+lines = [l for l in lines if l.strip() != "| | | |"]
+open("PROGRESS.md", "w").write("\n".join(lines))
+print(f"logged: {date} — {what}" + (f" ({mins} min)" if mins else ""))
+PY
