@@ -107,6 +107,34 @@ def longest_consecutive(nums: list) -> int:
     pass
 
 
+def encode(strs: list) -> str:
+    """LC 271. Encode a list of strings into ONE string.
+
+    encode(["neet", "code"]) -> some string that decode() can reverse
+
+    The catch: any separator you pick could appear inside a string. ["a#b"]
+    must survive. So a plain "#".join() is wrong.
+
+    The fix is length-prefixing: write each string as <length>#<string>.
+    "neet" -> "4#neet". Now the reader knows exactly how many characters to
+    take and never has to guess where a string ends.
+
+    Target: O(n) time over the total characters.
+    """
+    pass
+
+
+def decode(s: str) -> list:
+    """LC 271. Reverse `encode`. decode(encode(x)) must equal x for any x.
+
+    Walk with a pointer: read digits until '#', that's the length; take that
+    many characters; jump past them; repeat.
+
+    decode("") -> []
+    """
+    pass
+
+
 def is_valid_sudoku(board: list) -> bool:
     """LC 36. Is the 9x9 board valid SO FAR? (Empty cells are '.')
 

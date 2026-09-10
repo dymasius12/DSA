@@ -105,6 +105,27 @@ def longest_consecutive(nums: list) -> int:
     return best
 
 
+def encode(strs: list) -> str:
+    # Length-prefix each string: "4#neet".
+    # Any delimiter alone is ambiguous (["a#b"] would break "#".join).
+    # A length says exactly how far to read, so the content can be anything.
+    return ''.join(f"{len(s)}#{s}" for s in strs)
+
+
+def decode(s: str) -> list:
+    # Read digits up to '#' -> length. Take that many chars. Jump. Repeat.
+    res = []
+    i = 0
+    while i < len(s):
+        j = i
+        while s[j] != '#':          # find the delimiter
+            j += 1
+        length = int(s[i:j])        # everything before it is the length
+        res.append(s[j + 1:j + 1 + length])
+        i = j + 1 + length          # jump past the string we just took
+    return res
+
+
 def is_valid_sudoku(board: list) -> bool:
     # Three independent "have I seen this digit here" checks.
     # (r // 3, c // 3) maps a cell to one of the nine 3x3 boxes.

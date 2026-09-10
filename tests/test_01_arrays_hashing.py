@@ -3,6 +3,7 @@ import pytest
 from problems.m01_arrays_hashing.arrays_hashing import (
     contains_duplicate, is_anagram, two_sum, group_anagrams,
     top_k_frequent, product_except_self, longest_consecutive, is_valid_sudoku,
+    encode, decode,
 )
 
 
@@ -140,6 +141,32 @@ class TestLongestConsecutive:
         nums = list(range(100_000))
         random.Random(0).shuffle(nums)
         assert longest_consecutive(nums) == 100_000
+
+
+class TestEncodeDecode:
+    """The only contract that matters: decode(encode(x)) == x, for ANY x."""
+
+    @pytest.mark.parametrize("strs", [
+        ["neet", "code", "love", "you"],
+        [],
+        [""],
+        ["", ""],
+        ["a"],
+        ["a#b"],                    # the delimiter appears INSIDE a string
+        ["#", "##", "###"],
+        ["12#34"],                  # looks like a length prefix
+        ["3#abc"],                  # looks like an entire encoded string
+        ["hello world", " ", "\n"],
+        ["x" * 500, "y"],           # multi-digit length
+    ])
+    def test_roundtrip(self, strs):
+        assert decode(encode(strs)) == strs
+
+    def test_encode_returns_a_string(self):
+        assert isinstance(encode(["a", "b"]), str)
+
+    def test_decode_empty(self):
+        assert decode("") == []
 
 
 def make_board(rows):

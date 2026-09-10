@@ -4,10 +4,13 @@ Stubs with a docstring spec and a complexity target. **Fill in the body** — th
 tests fail until you do, including performance tests that reject an O(n²)
 solution where O(n) was the point.
 
-| Module | File |
-|---|---|
-| 00 — Foundations | [`m00_foundations/warmups.py`](m00_foundations/warmups.py) |
-| 01 — Arrays & Hashing | [`m01_arrays_hashing/arrays_hashing.py`](m01_arrays_hashing/arrays_hashing.py) |
+| Module | File | Problems |
+|---|---|---|
+| 00 — Foundations | [`m00_foundations/warmups.py`](m00_foundations/warmups.py) | 4 warm-ups |
+| 01 — Arrays & Hashing | [`m01_arrays_hashing/arrays_hashing.py`](m01_arrays_hashing/arrays_hashing.py) | all 9 — the full Blind 75 category |
+
+Which problems, and where they sit in the Blind 75:
+[`PROBLEMS.md`](../PROBLEMS.md).
 
 ```bash
 ./check 01              # run the module

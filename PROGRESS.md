@@ -33,6 +33,7 @@ topics were fun.
 | 15 | Greedy | todo | - | 1 |
 | 16 | Intervals | todo | - | 1 |
 | 17 | Bit Manipulation | todo | - | 1 |
+| 18 | Math & Geometry | todo | - | 1 |
 
 Status: `todo` · `learning` · `done` · `solid`
 
@@ -58,5 +59,6 @@ Problems that beat me, or that I want in the pre-interview drill set. These are
 the first things to re-solve when I come back.
 
 Format: `module/problem_name` — one line on why it's here.
+The full Blind 75 checklist lives in [`PROBLEMS.md`](PROBLEMS.md).
 
 - _(nothing starred yet — add them as they happen)_

@@ -17,6 +17,7 @@ Built so that coming back after months away takes an hour, not a month.
 | 🔄 Come back after a long gap | [START_HERE.md](START_HERE.md) |
 | 📚 Learn a topic properly | [notes/](notes/) → then [problems/](problems/) |
 | ⚡ Cram before an interview | [cheatsheets/](cheatsheets/) |
+| ✅ **Work the Blind 75** | [PROBLEMS.md](PROBLEMS.md) |
 | 📊 See where I'm at | [PROGRESS.md](PROGRESS.md) |
 
 ---
@@ -46,6 +47,8 @@ notes/         the full explanation — for learning it the first time
 problems/      stubs I fill in — the reps
 solutions/     annotated references — read AFTER trying
 tests/         pytest; fails until the stub is implemented
+
+PROBLEMS.md    the Blind 75 checklist, mapped to these modules
 ```
 
 Same topic, three depths. Read across them depending on how much time I have.
@@ -54,12 +57,45 @@ Same topic, three depths. Read across them depending on how much time I have.
 
 ## Roadmap
 
-**Built:** `00` Foundations · `01` Arrays & Hashing
+The order isn't arbitrary — topics unlock each other. This is the NeetCode
+dependency graph:
 
-**Planned:** `02` Two Pointers · `03` Sliding Window · `04` Stack ·
-`05` Binary Search · `06` Linked List · `07` Trees · `08` Tries · `09` Heap ·
-`10` Backtracking · `11` Graphs · `12` Advanced Graphs · `13` 1-D DP ·
-`14` 2-D DP · `15` Greedy · `16` Intervals · `17` Bit Manipulation
+```mermaid
+graph TD
+    A["01 Arrays & Hashing"] --> B["02 Two Pointers"]
+    A --> C["04 Stack"]
+    B --> D["05 Binary Search"]
+    B --> E["03 Sliding Window"]
+    B --> F["06 Linked List"]
+    D --> G["07 Trees"]
+    E --> G
+    F --> G
+    G --> H["08 Tries"]
+    G --> I["09 Heap / Priority Queue"]
+    G --> J["10 Backtracking"]
+    I --> K["16 Intervals"]
+    I --> L["15 Greedy"]
+    I --> M["12 Advanced Graphs"]
+    J --> N["11 Graphs"]
+    J --> O["13 1-D DP"]
+    N --> M
+    N --> P["14 2-D DP"]
+    O --> P
+    O --> Q["17 Bit Manipulation"]
+    P --> R["18 Math & Geometry"]
+    Q --> R
+```
+
+Two things that graph tells you that a flat list doesn't:
+
+- **Arrays & Hashing is the root.** Everything downstream assumes it. Skipping
+  it to get to the "interesting" topics is why people stall later.
+- **Trees is the choke point.** Tries, Heap, and Backtracking all wait behind
+  it — and Backtracking is what opens Graphs and DP. It's the single highest-
+  leverage module in the middle of the map.
+
+**Built:** `00` Foundations · `01` Arrays & Hashing ·
+**Next:** `02` Two Pointers
 
 Modules get built as I reach them. A wall of 300 unfinished stubs is exactly
 what makes coming back feel heavy.
@@ -72,7 +108,7 @@ what makes coming back feel heavy.
 | # | Module | The pattern, in one line | Problems | Status |
 |---|--------|--------------------------|----------|--------|
 | 00 | Foundations | Big-O, and the Python toolkit you need | 4 | ✅ |
-| 01 | Arrays & Hashing | Trade memory for time with a dict or set | 8 | ✅ |
+| 01 | Arrays & Hashing | Trade memory for time with a dict or set | 9 | ✅ |
 | 02 | Two Pointers | Two indices walking a sorted array | 6 | |
 | 03 | Sliding Window | A contiguous range that grows and shrinks | 7 | |
 | 04 | Stack | Last in, first out — "match the previous thing" | 6 | |
@@ -89,6 +125,7 @@ what makes coming back feel heavy.
 | 15 | Greedy | Take the locally best choice — and prove it | 6 | |
 | 16 | Intervals | Sort by start, then merge or count | 5 | |
 | 17 | Bit Manipulation | XOR, masks, and counting bits | 5 | |
+| 18 | Math & Geometry | Index arithmetic on a matrix — rotate, spiral, in-place | 3 | |
 
 </details>
 
