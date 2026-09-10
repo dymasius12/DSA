@@ -1,5 +1,7 @@
 # NN — <topic> · reload sheet
 
+<!-- Copy this file to cheatsheets/NN_topic.md when starting a module. -->
+
 <!-- Write this yourself when you finish the module. In YOUR words.
      Target: one screen. If it doesn't fit on one screen it isn't compressed.
      Future-you reads this file, not the notes. -->

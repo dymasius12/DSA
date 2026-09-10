@@ -1,5 +1,9 @@
 # Complexity — 2-minute reload
 
+Everything about Big-O that actually comes up in an interview, and nothing that
+doesn't. Companion to [`notes/00_foundations.md`](../notes/00_foundations.md),
+which explains the *why*.
+
 ## The ladder
 O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ) < O(n!)
 

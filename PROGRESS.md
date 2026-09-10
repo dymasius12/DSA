@@ -1,14 +1,17 @@
-# Progress & Review Log
+# Progress
 
-This file is read by `./review`. Keep the table format intact — edit the
-**Status**, **Last touched** (YYYY-MM-DD), and **Confidence** columns.
+My tracker. Honest, not flattering — the numbers below are only useful if
+they're true, and the temptation is always to round up.
 
-**Confidence:** 1 = no idea · 2 = need notes · 3 = can do with a hint ·
-4 = can solve clean · 5 = could teach it
+`./review` parses the table, so keep the column format intact. Edit **Status**,
+**Last touched** (`YYYY-MM-DD`), and **Confidence**.
 
-`./review` ranks topics by *decay* (days since you touched it, weighted by how
-shaky you were). Trust the ranking over your gut — your gut overrates the
-topics you liked.
+**Confidence:** 1 = no idea · 2 = need the notes · 3 = can do it with a hint ·
+4 = can solve it clean · 5 = could teach it
+
+`./review` ranks by *decay* — days since I touched it, weighted by how shaky I
+was. It's worth trusting over instinct, because instinct overrates whichever
+topics were fun.
 
 | # | Module | Status | Last touched | Confidence |
 |---|--------|--------|--------------|------------|
@@ -31,14 +34,17 @@ topics you liked.
 | 16 | Intervals | todo | - | 1 |
 | 17 | Bit Manipulation | todo | - | 1 |
 
-Status values: `todo` · `learning` · `done` · `solid`
+Status: `todo` · `learning` · `done` · `solid`
 
 ---
 
 ## Session log
 
-Append one line each time you touch this repo, even a 15-minute one.
-Seeing an unbroken column of dates is what keeps you coming back.
+One line per session, added by `./log "what I did" 45`. Even the short ones —
+*especially* the short ones.
+
+The point isn't the data. It's that an unbroken column of dates is the single
+most convincing argument that this is mine and I've been here before.
 
 | Date | What I did | Minutes |
 |------|------------|---------|
@@ -48,7 +54,9 @@ Seeing an unbroken column of dates is what keeps you coming back.
 
 ## ★ Starred problems
 
-Problems that beat you, or that you want in your pre-interview drill set.
-These are the ones to re-solve first when you come back.
+Problems that beat me, or that I want in the pre-interview drill set. These are
+the first things to re-solve when I come back.
 
-- (add them as you go — `module/problem_name` and one line on why)
+Format: `module/problem_name` — one line on why it's here.
+
+- _(nothing starred yet — add them as they happen)_

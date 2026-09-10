@@ -1,8 +1,14 @@
 # The Pattern Map
 
-**The most important file in this repo.** If you only reload one thing, this.
+The most important file in this repo, and the one most likely to be useful on
+its own. Every interview pattern, what triggers it, and a working template.
 
-Read it as: *when I see this in a problem → reach for this.*
+LeetCode isn't three thousand problems — it's about sixteen patterns wearing
+three thousand costumes. Once you can name the pattern within a minute of
+reading a problem, the coding part is mechanical. That recognition is the whole
+skill, and this page is it compressed.
+
+Read the table as: *when a problem says this → reach for that.*
 
 ---
 
