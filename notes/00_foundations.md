@@ -138,6 +138,10 @@ int(-7/2) # -3, truncates toward zero.
 
 ---
 
+> For the wider set of idioms — sorting with `key=`, comprehensions, `bisect`,
+> `lru_cache`, `itertools` — see [`cheatsheets/_python.md`](../cheatsheets/_python.md).
+> Everything there is verified to run on Python 3.9.
+
 ## What to do now
 
 Open `problems/00_foundations/` and fill in the four warm-ups. They exist to
