@@ -1,7 +1,8 @@
 # DSA
 
 My practice repo for data structures, algorithms, and coding interviews.
-Python 3, organized by **pattern** — not by problem number.
+Python 3, organized by **pattern** — not by problem number — and working
+through the **[Blind 75](PROBLEMS.md)**.
 
 Built so that coming back after months away takes an hour, not a month.
 [Why that matters →](START_HERE.md)
@@ -55,6 +56,23 @@ Same topic, three depths. Read across them depending on how much time I have.
 
 ---
 
+## The problem list: Blind 75
+
+The [Blind 75](PROBLEMS.md) is the best-known curated list of interview
+problems: 75 of them, chosen to cover every core pattern with little overlap.
+It's the problem set this repo works through.
+
+| | Easy | Medium | Hard | Total |
+|---|---|---|---|---|
+| **Blind 75** | 20 | 48 | 7 | **75** |
+| **Built here so far** | 3 | 5 | 0 | **8** |
+
+The full checklist, grouped by module: **[PROBLEMS.md](PROBLEMS.md)**.
+Once it's done, the next step is the **NeetCode 150**. It covers the same 18
+topics and adds 75 more problems to smooth the jumps in difficulty.
+
+---
+
 ## Roadmap
 
 The order isn't arbitrary — topics unlock each other. This is the NeetCode
@@ -105,24 +123,24 @@ what makes coming back feel heavy.
 
 <br>
 
-| # | Module | The pattern, in one line | Problems | Status |
+| # | Module | The pattern, in one line | Blind 75 | Status |
 |---|--------|--------------------------|----------|--------|
-| 00 | Foundations | Big-O, and the Python toolkit you need | 4 | ✅ |
-| 01 | Arrays & Hashing | Trade memory for time with a dict or set | 9 | ✅ |
-| 02 | Two Pointers | Two indices walking a sorted array | 6 | |
-| 03 | Sliding Window | A contiguous range that grows and shrinks | 7 | |
-| 04 | Stack | Last in, first out — "match the previous thing" | 6 | |
-| 05 | Binary Search | Halve the search space every step | 7 | |
-| 06 | Linked List | Pointer surgery; fast and slow pointers | 8 | |
-| 07 | Trees | Recursion on two children | 12 | |
+| 00 | Foundations | Big-O, and the Python toolkit you need | — | ✅ |
+| 01 | Arrays & Hashing | Trade memory for time with a dict or set | 8 | ✅ |
+| 02 | Two Pointers | Two indices walking a sorted array | 3 | |
+| 03 | Sliding Window | A contiguous range that grows and shrinks | 4 | |
+| 04 | Stack | Last in, first out — "match the previous thing" | 1 | |
+| 05 | Binary Search | Halve the search space every step | 2 | |
+| 06 | Linked List | Pointer surgery; fast and slow pointers | 6 | |
+| 07 | Trees | Recursion on two children | 11 | |
 | 08 | Tries | A tree keyed by characters | 3 | |
-| 09 | Heap | Always pull the smallest or largest next | 6 | |
-| 10 | Backtracking | Try, recurse, undo | 8 | |
-| 11 | Graphs | Grids and adjacency lists; BFS and DFS | 10 | |
-| 12 | Advanced Graphs | Dijkstra, topological sort, union-find | 6 | |
+| 09 | Heap | Always pull the smallest or largest next | 1 | |
+| 10 | Backtracking | Try, recurse, undo | 2 | |
+| 11 | Graphs | Grids and adjacency lists; BFS and DFS | 6 | |
+| 12 | Advanced Graphs | Dijkstra, topological sort, union-find | 1 | |
 | 13 | 1-D DP | Cache the answer to a smaller version | 10 | |
-| 14 | 2-D DP | Cache over a grid of subproblems | 8 | |
-| 15 | Greedy | Take the locally best choice — and prove it | 6 | |
+| 14 | 2-D DP | Cache over a grid of subproblems | 2 | |
+| 15 | Greedy | Take the locally best choice — and prove it | 2 | |
 | 16 | Intervals | Sort by start, then merge or count | 5 | |
 | 17 | Bit Manipulation | XOR, masks, and counting bits | 5 | |
 | 18 | Math & Geometry | Index arithmetic on a matrix — rotate, spiral, in-place | 3 | |
