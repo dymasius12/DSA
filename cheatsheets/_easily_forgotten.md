@@ -138,6 +138,114 @@ doesn't change `s`. Assign the result: `s = s.replace('a', 'b')`.
 
 ---
 
+## Cleaning and filtering strings
+
+Almost every "clean up this string" task uses **one template**:
+
+```python
+''.join( <what to keep it as>  for c in s  if <keep this char?> )
+#          transform             loop          filter
+```
+
+The `if` decides what gets **dropped**, and the part before `for` decides what
+each kept character **becomes**. Once that's familiar, the recipes below are
+just variations on it.
+
+```python
+s = "A man, a plan, a canal: Panama!"
+
+# Keep only letters and digits (drops spaces, commas, punctuation)
+''.join(c for c in s if c.isalnum())           # 'AmanaplanacanalPanama'
+
+# ...and lowercase at the same time. This is Valid Palindrome's prep step.
+''.join(c.lower() for c in s if c.isalnum())   # 'amanaplanacanalpanama'
+
+# Only letters / only digits
+''.join(c for c in "a1b2c3" if c.isalpha())    # 'abc'
+''.join(c for c in "a1b2c3" if c.isdigit())    # '123'
+
+# Drop specific characters
+''.join(c for c in s if c not in ",.:!?")      # 'A man a plan a canal Panama'
+```
+
+### Spaces
+
+```python
+"a b  c".replace(" ", "")          # 'abc'     removes spaces only
+''.join("a b\tc\n".split())        # 'abc'     removes ALL whitespace
+' '.join("a   b    c".split())     # 'a b c'   collapses runs to one space
+"  hi  ".strip()                   # 'hi'      only the two ends
+```
+
+`.split()` with **no argument** splits on any run of whitespace and drops the
+empty pieces. That's why `''.join(s.split())` and `' '.join(s.split())` work.
+`.split(' ')` doesn't do this: `"a  b".split(' ')` gives `['a', '', 'b']`.
+
+### Case
+
+```python
+s.lower()          # 'a man, a plan, a canal: panama!'
+s.upper()          # 'A MAN, A PLAN, A CANAL: PANAMA!'
+"hello world".title()        # 'Hello World'
+"hello world".capitalize()   # 'Hello world'   first letter only
+"Hi".swapcase()              # 'hI'
+c.islower(), c.isupper()     # check one character
+a.lower() == b.lower()       # compare ignoring case
+```
+
+### The check methods, and what counts
+
+| Method | True for | Example |
+|---|---|---|
+| `c.isalnum()` | letter **or** digit | `'a'`, `'7'` |
+| `c.isalpha()` | letter | `'a'`, `'Z'` |
+| `c.isdigit()` | digit | `'7'` |
+| `c.isspace()` | space, tab, newline | `' '`, `'\t'` |
+| `c.islower()` / `c.isupper()` | lowercase / uppercase letter | `'a'` / `'A'` |
+
+On a whole string they check **every** character: `"abc1".isalnum()` is
+`True`, and `"ab c".isalnum()` is `False` because of the space. On an empty
+string they all return `False`.
+
+### Checking without building a new string
+
+```python
+any(c.isdigit() for c in s)        # does it contain a digit?
+all(c.isalpha() for c in s)        # is it letters only?
+sum(c.isupper() for c in s)        # how many capitals (True counts as 1)
+```
+
+### Words
+
+```python
+' '.join(reversed(s.split()))      # reverse word order: 'b a' from 'a b'
+' '.join(w[::-1] for w in s.split())   # reverse each word, keep order
+[w for w in s.split() if len(w) > 3]   # words longer than 3 letters
+```
+
+### Handy constants
+
+```python
+import string
+string.ascii_lowercase     # 'abcdefghijklmnopqrstuvwxyz'
+string.ascii_uppercase     # 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+string.digits              # '0123456789'
+string.punctuation         # '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+```
+
+### Putting it together: the palindrome check
+
+```python
+cleaned = ''.join(c.lower() for c in s if c.isalnum())
+cleaned == cleaned[::-1]           # True for "A man, a plan, a canal: Panama!"
+```
+
+This builds a new string, so it uses O(n) extra space. It's correct, and a
+good first answer. An interviewer may then ask for O(1) space, which means two
+pointers skipping non-alphanumeric characters as they go (Module 02).
+
+---
+
 ## Dicts
 
 ```python
