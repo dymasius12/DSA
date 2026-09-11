@@ -18,7 +18,7 @@ the *how*. Tick things off here as they get solved.
 
 - [ ] 🟢 Contains Duplicate ✅ `contains_duplicate`
 - [ ] 🟢 Valid Anagram ✅ `is_anagram`
-- [ ] 🟢 Two Sum ✅ `two_sum`
+- [x] 🟢 Two Sum ✅ `two_sum`
 - [ ] 🟡 Group Anagrams ✅ `group_anagrams`
 - [ ] 🟡 Top K Frequent Elements ✅ `top_k_frequent`
 - [ ] 🟡 Product of Array Except Self ✅ `product_except_self`
@@ -27,7 +27,7 @@ the *how*. Tick things off here as they get solved.
 
 ## `02` Two Pointers  <sub>(3)</sub>
 
-- [ ] 🟢 Valid Palindrome
+- [x] 🟢 Valid Palindrome
 - [ ] 🟡 3Sum
 - [ ] 🟡 Container With Most Water
 
