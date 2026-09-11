@@ -322,6 +322,8 @@ If you only keep five:
 
 ## Related
 
+- [`_easily_forgotten.md`](_easily_forgotten.md): the plain basics (`len()`,
+  `str()`, conversions) for when the blank is simpler than an idiom
 - [`00_complexity.md`](00_complexity.md) — what each of these costs
 - [`_patterns.md`](_patterns.md) — the algorithm templates that use them
 - [`../notes/00_foundations.md`](../notes/00_foundations.md) — the longer

@@ -14,7 +14,7 @@ Built so that coming back after months away takes an hour, not a month.
 | I want to... | Go here |
 |---|---|
 | 🧭 **See every pattern + template** | **[cheatsheets/_patterns.md](cheatsheets/_patterns.md)** ← start here if you're just visiting |
-| 🐍 **Look up a Python idiom** | [cheatsheets/_python.md](cheatsheets/_python.md) |
+| 🐍 **Look up a Python idiom** | [cheatsheets/_python.md](cheatsheets/_python.md) · [basics I forget](cheatsheets/_easily_forgotten.md) |
 | 🔄 Come back after a long gap | [START_HERE.md](START_HERE.md) |
 | 📚 Learn a topic properly | [notes/](notes/) → then [problems/](problems/) |
 | ⚡ Cram before an interview | [cheatsheets/](cheatsheets/) |

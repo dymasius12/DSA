@@ -6,6 +6,7 @@ after a gap, and the rest decompresses behind it.
 | File | What it is |
 |---|---|
 | [`_patterns.md`](_patterns.md) | 🧭 **Every pattern: trigger → template.** The single most useful file in the repo |
+| [`_easily_forgotten.md`](_easily_forgotten.md) | 🧠 **The basics you blank on**: `len()`, `str()`, type conversions, `sort` vs `sorted`, Python spelling |
 | [`_python.md`](_python.md) | 🐍 **Python idioms worth memorizing** — sorting, comprehensions, Counter, heapq, the negative-division trap |
 | [`00_complexity.md`](00_complexity.md) | Big-O, constraint→complexity table, Python costs people get wrong |
 | [`01_arrays_hashing.md`](01_arrays_hashing.md) | The four hashing shapes, key snippets |
