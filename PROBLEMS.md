@@ -53,7 +53,7 @@ the *how*. Tick things off here as they get solved.
 - [ ] 🟢 Merge Two Sorted Lists
 - [ ] 🟡 Reorder List
 - [ ] 🟡 Remove Nth Node From End of List
-- [ ] 🟢 Linked List Cycle
+- [x] 🟢 Linked List Cycle · [my solution](leetcode/06_linked_list/0141_linked_list_cycle.py)
 - [ ] 🔴 Merge k Sorted Lists
 
 ## `07` Trees  <sub>(11)</sub>

@@ -19,6 +19,7 @@ Built so that coming back after months away takes an hour, not a month.
 | 📚 Learn a topic properly | [notes/](notes/) → then [problems/](problems/) |
 | ⚡ Cram before an interview | [cheatsheets/](cheatsheets/) |
 | ✅ **Work the Blind 75** | [PROBLEMS.md](PROBLEMS.md) |
+| ✍️ See problems I've solved | [leetcode/](leetcode/) |
 | 📊 See where I'm at | [PROGRESS.md](PROGRESS.md) |
 
 ---
@@ -48,6 +49,8 @@ notes/         the full explanation — for learning it the first time
 problems/      stubs I fill in — the reps
 solutions/     annotated references — read AFTER trying
 tests/         pytest; fails until the stub is implemented
+
+leetcode/      my own accepted LeetCode solutions, with review notes
 
 PROBLEMS.md    the Blind 75 checklist, mapped to these modules
 ```

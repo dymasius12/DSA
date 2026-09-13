@@ -21,7 +21,7 @@ topics were fun.
 | 03 | Sliding Window | todo | - | 1 |
 | 04 | Stack | todo | - | 1 |
 | 05 | Binary Search | todo | - | 1 |
-| 06 | Linked List | todo | - | 1 |
+| 06 | Linked List | learning | 2026-09-13 | 1 |
 | 07 | Trees | todo | - | 1 |
 | 08 | Tries | todo | - | 1 |
 | 09 | Heap | todo | - | 1 |
@@ -49,6 +49,7 @@ most convincing argument that this is mine and I've been here before.
 
 | Date | What I did | Minutes |
 |------|------------|---------|
+| 2026-09-13 | LeetCode: solved 141 Linked List Cycle (fast & slow pointers) |  |
 | 2026-09-11 | LeetCode: solved Valid Palindrome + Two Sum |  |
 | 2026-09-10 | set up the repo | 0 |
 
