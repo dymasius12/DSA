@@ -17,7 +17,7 @@ the *how*. Tick things off here as they get solved.
 ## `01` Arrays & Hashing  <sub>(8)</sub>
 
 - [ ] 🟢 Contains Duplicate ✅ `contains_duplicate`
-- [ ] 🟢 Valid Anagram ✅ `is_anagram`
+- [x] 🟢 Valid Anagram ✅ `is_anagram` · [my solution](leetcode/01_arrays_hashing/0242_valid_anagram.py)
 - [x] 🟢 Two Sum ✅ `two_sum`
 - [ ] 🟡 Group Anagrams ✅ `group_anagrams`
 - [ ] 🟡 Top K Frequent Elements ✅ `top_k_frequent`

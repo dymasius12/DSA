@@ -11,7 +11,7 @@ Each file has:
 - tests you can run.
 
 ```bash
-python3 leetcode/06_linked_list/0141_linked_list_cycle.py
+python3 leetcode/01_arrays_hashing/0242_valid_anagram.py
 ```
 
 How this differs from [`solutions/`](../solutions/): those are reference
@@ -20,6 +20,7 @@ problems.
 
 | # | Problem | Difficulty | Module | Pattern |
 |---|---|---|---|---|
+| 242 | [Valid Anagram](01_arrays_hashing/0242_valid_anagram.py) | 🟢 Easy | 01 Arrays & Hashing | counting (frequency array) |
 | 141 | [Linked List Cycle](06_linked_list/0141_linked_list_cycle.py) | 🟢 Easy | 06 Linked List | fast & slow pointers |
 
 [← back to the repo](../README.md)
