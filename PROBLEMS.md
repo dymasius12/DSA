@@ -33,7 +33,7 @@ the *how*. Tick things off here as they get solved.
 
 ## `03` Sliding Window  <sub>(4)</sub>
 
-- [ ] 🟢 Best Time to Buy and Sell Stock
+- [x] 🟢 Best Time to Buy and Sell Stock · [my solution](leetcode/03_sliding_window/0121_best_time_to_buy_and_sell_stock.py)
 - [ ] 🟡 Longest Substring Without Repeating Characters
 - [ ] 🟡 Longest Repeating Character Replacement
 - [ ] 🔴 Minimum Window Substring
