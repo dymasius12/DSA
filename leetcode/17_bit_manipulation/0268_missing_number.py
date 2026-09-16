@@ -57,6 +57,39 @@ class Solution:
 # ------------------------------------------------------------------------------
 
 
+# Why `return n` is always right
+#
+# `return n` doesn't always run. It only runs when the loop finishes without
+# finding a mismatch, and that means every index 0..n-1 holds its own value,
+# so the only number left over is n itself.
+#
+# The natural follow-up: what if a test gives a "complete" array with nothing
+# missing? That can't happen, because n is defined by the array's own length,
+# so the range always stays one step ahead of the array:
+#
+#     [0, 1, 2]     len 3, so n = 3, range [0, 3] = {0,1,2,3} -> 3 is missing
+#                   the loop finds no mismatch, `return n` gives 3.  Correct.
+#
+#     add the 3:
+#     [0, 1, 2, 3]  len 4, so n = 4, range [0, 4] = {0,1,2,3,4} -> 4 is missing
+#                   again no mismatch, `return n` gives 4.        Correct.
+#
+# You can never fill the gap. The array has n slots but the range holds n + 1
+# numbers, so by the pigeonhole principle exactly one is always left out. Add
+# the missing one and the array grows, which grows the range too.
+#
+# That's also why this problem always has exactly one answer: the constraints
+# promise the values are distinct and inside [0, n].
+#
+# What if an input broke those rules? Then the code can be wrong, but so can
+# every solution to this problem, and each one is wrong differently. On the
+# invalid input [0, 0] (a duplicate, and 1 never appears):
+#     sort+index -> 1     sum -> 3     xor -> 3
+# Three answers, none meaningful, because that input isn't this problem.
+# Worth saying out loud in an interview: "I'm assuming the input follows the
+# constraints." It shows you noticed the assumption rather than missed it.
+
+
 def missing_number_sum(nums: List[int]) -> int:
     """Gauss sum, the optimal answer. O(n) time, O(1) space.
 
@@ -169,6 +202,27 @@ if __name__ == "__main__":
     missing_number_xor(untouched)
     assert untouched == [3, 0, 1]
     print("note 3 confirmed: the sort version reordered the caller's list, XOR left it alone")
+
+    # The "return n is always right" section: you can never hand it a complete
+    # array, because adding the missing number grows the range as well.
+    arr = [0, 1, 2]
+    for expected in (3, 4, 5):
+        assert Solution().missingNumber(list(arr)) == expected, arr
+        assert missing_number_sum(arr) == expected
+        assert missing_number_xor(arr) == expected
+        arr = arr + [expected]        # fill the gap; the range grows too
+    assert Solution().missingNumber([0]) == 1
+    print("caveat confirmed: [0,1,2] -> 3, [0,1,2,3] -> 4, [0,1,2,3,4] -> 5; "
+          "the gap can never be filled")
+
+    # ...and what an out-of-constraints input does: three different answers.
+    invalid = [0, 0]
+    answers = (Solution().missingNumber(list(invalid)),
+               missing_number_sum(invalid),
+               missing_number_xor(invalid))
+    assert answers == (1, 3, 3), answers
+    print(f"caveat confirmed: invalid input [0, 0] gives {answers} "
+          "(sort, sum, xor) — no approach is safe outside the constraints")
 
     # Note 5: `for i in len(nums)` is a TypeError.
     try:

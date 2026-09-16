@@ -49,6 +49,7 @@ most convincing argument that this is mine and I've been here before.
 
 | Date | What I did | Minutes |
 |------|------------|---------|
+| 2026-09-16 | Wrote up why 'return n' is always right (268 Missing Number) |  |
 | 2026-09-16 | LeetCode: solved 268 Missing Number (sort+index; also sum and XOR) |  |
 | 2026-09-15 | LeetCode: solved 121 Best Time to Buy and Sell Stock (running minimum) |  |
 | 2026-09-14 | LeetCode: solved 242 Valid Anagram (26-slot counting array) |  |
