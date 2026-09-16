@@ -32,7 +32,7 @@ topics were fun.
 | 14 | 2-D DP | todo | - | 1 |
 | 15 | Greedy | todo | - | 1 |
 | 16 | Intervals | todo | - | 1 |
-| 17 | Bit Manipulation | todo | - | 1 |
+| 17 | Bit Manipulation | learning | 2026-09-16 | 1 |
 | 18 | Math & Geometry | todo | - | 1 |
 
 Status: `todo` · `learning` · `done` · `solid`
@@ -49,6 +49,7 @@ most convincing argument that this is mine and I've been here before.
 
 | Date | What I did | Minutes |
 |------|------------|---------|
+| 2026-09-16 | LeetCode: solved 268 Missing Number (sort+index; also sum and XOR) |  |
 | 2026-09-15 | LeetCode: solved 121 Best Time to Buy and Sell Stock (running minimum) |  |
 | 2026-09-14 | LeetCode: solved 242 Valid Anagram (26-slot counting array) |  |
 | 2026-09-13 | LeetCode: solved 141 Linked List Cycle (fast & slow pointers) |  |

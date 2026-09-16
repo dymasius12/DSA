@@ -134,7 +134,7 @@ the *how*. Tick things off here as they get solved.
 - [ ] 🟢 Number of 1 Bits
 - [ ] 🟢 Counting Bits
 - [ ] 🟢 Reverse Bits
-- [ ] 🟢 Missing Number
+- [x] 🟢 Missing Number · [my solution](leetcode/17_bit_manipulation/0268_missing_number.py)
 - [ ] 🟡 Sum of Two Integers
 
 ## `18` Math & Geometry  <sub>(3)</sub>
