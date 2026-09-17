@@ -1,72 +1,79 @@
 # Start here
 
-A note to myself, for whenever I come back. Public because someone else might
-be in the same loop.
+For coming back after a break, whether it's been two weeks or two years.
 
 ---
 
-If I'm reading this, I came back. That was the hard part, and it's already done.
+**You came back. That was the hard part.**
 
-**So: don't scroll the roadmap and feel behind.** That reflex — opening the
-repo, seeing seventeen modules, most of them untouched, and closing the tab —
-is the thing this file exists to interrupt. Pick the line below that matches
-today and do only that.
+Don't scroll the roadmap and feel behind. Opening the repo, seeing everything
+you haven't done, and closing the tab is the habit this page exists to break.
+Pick the situation below that matches today, and do only that.
 
 ---
 
-## "I've been gone a while and it feels like I lost everything"
+## "It's been a while and I've forgotten everything"
 
-I didn't. Recognition comes back much faster than it built the first time.
-Reloading is hours, not weeks. In order:
+You haven't. Recognising something comes back far faster than learning it did.
+This is a reload, not a restart:
 
-1. **Read [`cheatsheets/00_complexity.md`](cheatsheets/00_complexity.md) and
-   [`cheatsheets/_patterns.md`](cheatsheets/_patterns.md).** Twenty minutes.
-   That's the whole map — every pattern, its trigger, its template.
-2. **Run `./review`.** It says which topics decayed most. Don't argue with it.
-3. **Re-solve one problem I've already solved before**, from a blank file. Not
-   a new one. The point isn't progress, it's proving to myself the knowledge is
-   still in there. It is.
-4. *Then* pick up wherever `PROGRESS.md` left off.
+1. **Read the map (about 20 minutes).**
+   [`cheatsheets/_patterns.md`](cheatsheets/_patterns.md) has every pattern, its
+   trigger, and its template. [`cheatsheets/00_complexity.md`](cheatsheets/00_complexity.md)
+   is Big-O on one page.
+2. **Run `./review`.** It ranks topics by how much they've faded. Trust it over
+   your gut, which overrates the topics you enjoyed.
+3. **Re-solve one problem you've already solved.** Open a file in
+   [`leetcode/`](leetcode/), read **only the header**, and solve it on LeetCode
+   or in a blank file. Then compare with the rest of the file. The point isn't
+   progress: it's proving the knowledge is still there.
+4. **Then carry on** where [`PROGRESS.md`](PROGRESS.md) left off.
 
-About ninety minutes to functional. That's a reload, not a restart.
+About ninety minutes, and you're working again.
 
-## "I have fifteen minutes today"
+## "I only have 15 minutes"
 
-Open one cheatsheet. Read it. Close it. `./log "read the graphs cheatsheet" 15`.
+Read one cheatsheet, then `./log "read the sliding window cheatsheet" 15`.
 
-That's a real session. The repo is built so a fifteen-minute touch is never
-wasted, because the alternative — waiting for a free Saturday that never
-arrives — is how six months go by.
+That counts. Waiting for a free afternoon that never comes is how six months go
+by, and a 15-minute session is never wasted here.
 
-## "I'm actually back and want to make progress"
+## "I'm back and want to make progress"
 
-[`README.md`](README.md) → the roadmap → the next unfinished module.
+[`ROADMAP.md`](ROADMAP.md) shows each module's progress and what to do next.
+[`PROBLEMS.md`](PROBLEMS.md) shows which Blind 75 problems are left.
 
 ## "I have an interview soon"
 
-[`cheatsheets/_patterns.md`](cheatsheets/_patterns.md), then re-solve the
-starred (★) problems in [`PROGRESS.md`](PROGRESS.md). Ignore everything else.
-This is not the week to learn a new pattern.
+1. [`cheatsheets/_patterns.md`](cheatsheets/_patterns.md)
+2. Re-solve the files in [`leetcode/`](leetcode/) from their headers alone.
+3. Re-solve the ★ starred problems in [`PROGRESS.md`](PROGRESS.md).
+
+Skip everything else. This isn't the week to learn a new pattern.
+
+## "My setup doesn't work any more"
+
+```bash
+python3 -m pip install -r requirements.txt
+./check all
+```
+
+If `./check all` passes, everything is fine. It checks every reference
+solution, every write-up, and that the indexes are up to date.
 
 ---
 
-## Why the repo is shaped this way
+## Why a reload works
 
-DSA knowledge evaporates because it gets stored as thousands of loose problems.
-Loose things decay. Patterns compress, and compressed things reload fast.
+DSA knowledge fades when it's stored as thousands of separate problems.
+Patterns compress, and compressed things reload fast. That's why each topic is
+kept at three depths: problems (fade fast), notes (fade slowly), and
+cheatsheets (barely fade). You reload from the cheatsheet, and the rest follows.
 
-So each module leaves behind three artifacts, in decreasing order of how fast
-they rot: the **problems** (fast), the **notes** (slow), the **cheatsheet**
-(barely). Coming back means reloading the smallest, most durable one and letting
-the rest decompress behind it.
+It's also why each module's cheatsheet should be written **in your own
+words**. Compressing it yourself is what makes it stick, and later you'll
+trust your own phrasing more than anyone else's.
 
-**The one rule:** when I finish a module, I write its cheatsheet *in my own
-words*. Not copied from the notes. The act of compressing it is what makes it
-stick — and in six months I'll trust my own phrasing over anyone else's.
+**The gap was never the problem. Believing the gap meant starting over was.**
 
----
-
-## The thing worth remembering
-
-The gap was never the problem. Believing the gap meant starting over was the
-problem. This repo is the proof that it doesn't.
+[← back to the repo](README.md)

@@ -56,95 +56,52 @@ memory to turn an O(n²) scan into an O(n) one.** Remember that sentence.
 
 ## Part 2: The Python toolkit
 
-You need fluency with these six things. Not familiarity — fluency.
+The four warm-ups in `problems/m00_foundations/` need only what's below. The
+rest of the toolkit lives in the cheatsheets, so each thing is explained once:
 
-### `list` — the workhorse
-```python
-a = [3, 1, 2]
-a.append(4)        # O(1)   add to end
-a.pop()            # O(1)   remove from end
-a.pop(0)           # O(n)   remove from front — AVOID, use deque
-a.sort()           # O(n log n) in place
-b = sorted(a)      # O(n log n) new list
-a[::-1]            # reversed copy
-a[1:3]             # slice — O(k), it COPIES
-len(a)             # O(1)
-```
+| You need | It's in |
+|---|---|
+| sorting with `key=`, comprehensions, `deque`, `heapq`, `bisect`, `lru_cache` | [`cheatsheets/_python.md`](../cheatsheets/_python.md) |
+| `len()`, type conversions, string and list methods, `sort` vs `sorted` | [`cheatsheets/_easily_forgotten.md`](../cheatsheets/_easily_forgotten.md) |
+| what each operation costs | [`cheatsheets/00_complexity.md`](../cheatsheets/00_complexity.md) |
 
-### `dict` — the single most useful structure in interviews
+### `dict` and `set`: lookups in O(1)
 ```python
 d = {}
-d['x'] = 1         # O(1) average
-d.get('y', 0)      # O(1), no KeyError — returns 0 if missing
+d['x'] = 1         # O(1) on average
+d.get('y', 0)      # no KeyError: returns 0 if 'y' is missing
 'x' in d           # O(1)
-for k, v in d.items(): ...
-```
 
-### `set` — membership in O(1)
-```python
 s = set()
-s.add(3); 3 in s; s.remove(3)
-set(a) & set(b)    # intersection
+s.add(3)
+3 in s             # O(1)
 ```
-Use a set the moment you catch yourself writing `if x in some_list`.
-That list check is O(n); the set check is O(1).
+Use a set the moment you catch yourself writing `if x in some_list`. That list
+check is O(n); the set check is O(1).
 
-### `collections` — the three you'll actually use
+### `Counter` and `defaultdict`
 ```python
-from collections import Counter, defaultdict, deque
+from collections import Counter, defaultdict
 
-Counter("aabc")            # {'a': 2, 'b': 1, 'c': 1}  — frequency in one line
+Counter("aabc")            # {'a': 2, 'b': 1, 'c': 1}: frequencies in one line
 Counter(a) == Counter(b)   # "are these anagrams?" in one line
 
-d = defaultdict(list)      # missing key auto-creates []
-d['k'].append(1)           # no KeyError
-
-q = deque([1, 2, 3])
-q.append(4); q.popleft()   # BOTH O(1) — this is your BFS queue
+d = defaultdict(list)      # a missing key starts as []
+d['k'].append(1)           # so this never raises KeyError
 ```
 
-### `heapq` — a min-heap (Module 09)
+### The trap the last warm-up tests
 ```python
-import heapq
-h = []
-heapq.heappush(h, 5)   # O(log n)
-heapq.heappop(h)       # O(log n), returns SMALLEST
-h[0]                   # peek smallest, O(1)
-heapq.heappush(h, -x)  # negate to fake a MAX-heap
+grid = [[0] * 3] * 3               # WRONG: three references to the SAME row
+grid = [[0] * 3 for _ in range(3)] # right: a new row each time
 ```
-
-### Idioms that save you time under pressure
-```python
-for i, x in enumerate(a):        ...   # index AND value
-for x, y in zip(a, b):           ...   # walk two lists together
-res = [x*2 for x in a if x > 0]        # comprehension
-INF = float('inf')                     # a value bigger than everything
-a, b = b, a                            # swap, no temp variable
-'-'.join(['a','b'])                    # 'a-b'
-d.setdefault(k, []).append(v)          # defaultdict without importing
-```
-
-### Gotchas that will bite you
-```python
-grid = [[0]*3]*3       # WRONG — three references to the SAME row
-grid = [[0]*3 for _ in range(3)]   # right
-
-def f(acc=[]):         # WRONG — default list is shared across calls
-def f(acc=None):       # right; then `acc = acc or []`
-
--7 // 2   # -4, not -3. Python floors toward negative infinity.
-int(-7/2) # -3, truncates toward zero.
-```
+With the wrong version, `grid[0][0] = 5` changes every row.
 
 ---
 
-> For the wider set of idioms — sorting with `key=`, comprehensions, `bisect`,
-> `lru_cache`, `itertools` — see [`cheatsheets/_python.md`](../cheatsheets/_python.md).
-> Everything there is verified to run on Python 3.9.
-
 ## What to do now
 
-Open `problems/00_foundations/` and fill in the four warm-ups. They exist to
+Open `problems/m00_foundations/warmups.py` and fill in the four warm-ups. They exist to
 make sure the toolkit above is in your fingers, not just on the page.
 
 Run: `./check 00`

@@ -8,7 +8,7 @@ Already know the topic and just need to reload? Go to
 
 | File | Covers |
 |---|---|
-| [`00_foundations.md`](00_foundations.md) | Big-O from scratch, constraint→complexity, the Python toolkit (dict/set/Counter/deque/heapq), gotchas |
+| [`00_foundations.md`](00_foundations.md) | Big-O from scratch, reading constraints to find the required complexity, and the Python the warm-ups need |
 | [`01_arrays_hashing.md`](01_arrays_hashing.md) | Why a dict is O(1), the four hashing shapes, prefix/suffix, the `longest_consecutive` trap |
 
 Read the notes → do the [problems](../problems/) → run `./check NN`.

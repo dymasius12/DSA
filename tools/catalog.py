@@ -27,6 +27,29 @@ MODULES = [
     ("18", "Math & Geometry",   "18_math_geometry"),
 ]
 
+# One line per module: the pattern, for the roadmap table.
+MODULE_SUMMARY = {
+    "00": "Big-O, and the Python toolkit you need",
+    "01": "Trade memory for time with a dict or set",
+    "02": "Two indices walking toward each other",
+    "03": "A contiguous range that grows and shrinks",
+    "04": "Last in, first out: match the previous thing",
+    "05": "Halve the search space every step",
+    "06": "Pointer surgery; fast and slow pointers",
+    "07": "Recursion on two children",
+    "08": "A tree keyed by characters",
+    "09": "Always pull the smallest or largest next",
+    "10": "Try, recurse, undo",
+    "11": "Grids and adjacency lists; BFS and DFS",
+    "12": "Dijkstra, topological sort, union-find",
+    "13": "Cache the answer to a smaller version",
+    "14": "Cache over a grid of subproblems",
+    "15": "Take the locally best choice, and prove it",
+    "16": "Sort by start, then merge or count",
+    "17": "XOR, masks, and counting bits",
+    "18": "Index arithmetic on a matrix: rotate, spiral, in place",
+}
+
 # (module, LeetCode id, title, slug, difficulty, premium)
 # Checked against LeetCode's API by tools/verify_catalog.py.
 BLIND_75 = [

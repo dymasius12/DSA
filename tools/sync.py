@@ -1,6 +1,7 @@
 """Regenerate every index and progress number from the source files.
 
-    ./sync           rewrite PROBLEMS.md, leetcode/README.md, README.md progress
+    ./sync           rewrite PROBLEMS.md, leetcode/README.md, README.md progress,
+                     and the module table in ROADMAP.md
     ./sync --check   change nothing; exit 1 if any of them are out of date (CI)
 
 Sources:
@@ -14,7 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
-from catalog import BLIND_75, MODULES, SOLVED_WITHOUT_WRITEUP  # noqa: E402
+from catalog import BLIND_75, MODULE_SUMMARY, MODULES, SOLVED_WITHOUT_WRITEUP  # noqa: E402
 
 DOT = {"Easy": "🟢", "Medium": "🟡", "Hard": "🔴"}
 LEVELS = ("Easy", "Medium", "Hard")
@@ -182,6 +183,34 @@ def build_readme_progress(writeups, st):
     return "\n".join(lines)
 
 
+def build_roadmap_table(writeups, st):
+    """Per module: Blind 75 progress, and which study materials exist."""
+    lines = [GENERATED, "",
+             "| # | Module | The pattern, in one line | Blind 75 solved | In this repo |",
+             "|---|---|---|--:|---|"]
+    for num, name, folder in MODULES:
+        have = []
+        note = sorted(ROOT.glob(f"notes/{num}_*.md"))
+        if note:
+            have.append(f"[notes]({note[0].relative_to(ROOT).as_posix()})")
+        sheet = sorted(ROOT.glob(f"cheatsheets/{num}_*.md"))
+        if sheet:
+            have.append(f"[cheatsheet]({sheet[0].relative_to(ROOT).as_posix()})")
+        stub_dir = sorted(p for p in ROOT.glob(f"problems/m{num}_*") if p.is_dir())
+        if stub_dir:
+            have.append(f"[practice]({stub_dir[0].relative_to(ROOT).as_posix()}/)")
+        n_written = sum(1 for w in writeups.values() if w["module"] == num)
+        if n_written:
+            have.append(f"[{n_written} write-up{'s' if n_written != 1 else ''}]"
+                        f"(leetcode/{folder}/)")
+        rows = [p for p in BLIND_75 if p[0] == num]
+        done = sum(1 for p in rows if p[1] in st["solved"])
+        solved = f"{done} / {len(rows)}" if rows else "—"
+        lines.append(f"| {num} | {name} | {MODULE_SUMMARY[num]} | {solved} | "
+                     f"{' · '.join(have)} |")
+    return "\n".join(lines)
+
+
 def replace_between(text, start, end, body, path):
     pattern = re.compile(re.escape(start) + r".*?" + re.escape(end), re.S)
     if not pattern.search(text):
@@ -205,6 +234,11 @@ def main():
     outputs[readme] = replace_between(
         readme.read_text(encoding="utf-8"), "<!-- progress:start -->", "<!-- progress:end -->",
         build_readme_progress(writeups, st), readme)
+
+    roadmap = ROOT / "ROADMAP.md"
+    outputs[roadmap] = replace_between(
+        roadmap.read_text(encoding="utf-8"), "<!-- modules:start -->", "<!-- modules:end -->",
+        build_roadmap_table(writeups, st), roadmap)
 
     stale = [p for p, text in outputs.items()
              if not p.exists() or p.read_text(encoding="utf-8") != text]

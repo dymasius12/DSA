@@ -1,7 +1,7 @@
 # Cheatsheets
 
-One screen per topic. **The most durable layer** — this is what I reload from
-after a gap, and the rest decompresses behind it.
+One screen per topic. **The most durable layer:** reload from these after a
+gap, and the rest comes back behind them.
 
 | File | What it is |
 |---|---|
@@ -12,7 +12,7 @@ after a gap, and the rest decompresses behind it.
 | [`01_arrays_hashing.md`](01_arrays_hashing.md) | The four hashing shapes, key snippets |
 | [`../templates/cheatsheet.md`](../templates/cheatsheet.md) | Blank. Copy it when you finish a module |
 
-**The rule:** I write each of these *in my own words* after finishing a module.
-Compressing it myself is what makes it stick.
+**The rule:** write each module's cheatsheet *in your own words* once you've
+finished it. Compressing it yourself is what makes it stick.
 
 [← back to the repo](../README.md)

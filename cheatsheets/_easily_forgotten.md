@@ -292,6 +292,29 @@ math.floor(2.9)      # 2   round down
 
 ---
 
+## Default arguments: never a list or dict
+
+```python
+def add(x, items=[]):      # WRONG: the same list is shared by every call
+    items.append(x)
+    return items
+
+add(1)    # [1]
+add(2)    # [1, 2]   <- the 1 is still there
+
+def add(x, items=None):    # right: make a fresh list inside
+    if items is None:
+        items = []
+    items.append(x)
+    return items
+```
+
+A default value is created **once**, when the function is defined, not on each
+call. That's harmless for numbers and strings, and a bug for lists, dicts, and
+sets. It bites in recursive helpers like `def dfs(node, path=[])`.
+
+---
+
 ## My additions
 
 <!-- Whenever you look something up twice, put it here. One line each. -->
