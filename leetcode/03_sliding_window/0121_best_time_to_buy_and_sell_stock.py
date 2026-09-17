@@ -6,8 +6,7 @@ prices[i] is a stock's price on day i. Buy on one day and sell on a LATER day.
 Return the maximum profit, or 0 if no trade makes money.
 Constraints: 1 <= len(prices) <= 10^5, 0 <= prices[i] <= 10^4.
 
-Pattern:     running minimum, which is a sliding window with the left edge
-             at the cheapest day so far
+Pattern:     running minimum (a sliding window pinned at the cheapest day)
 Complexity:  O(n) time, O(1) space (once the slice is removed, see note 1)
 Solved:      2026-09-15
 

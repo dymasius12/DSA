@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# ./sync          regenerate PROBLEMS.md, the leetcode/ index, README progress
+# ./sync --check  exit 1 if any of them are out of date
+cd "$(dirname "$0")" && exec python3 tools/sync.py "$@"

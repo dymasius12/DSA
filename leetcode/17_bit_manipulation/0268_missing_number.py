@@ -6,12 +6,14 @@ nums holds n distinct numbers taken from the range [0, n]. Exactly one number
 from that range is absent. Return it.
 Constraints: n == len(nums), 1 <= n <= 10^4, 0 <= nums[i] <= n, all distinct.
 
-Pattern:     "array of 0..n with one missing" -> sum formula, XOR, or
-             index-as-value. Sorting works but isn't the intended answer.
+Pattern:     sum formula or XOR (sorting works, but isn't the intended answer)
 Complexity:  mine O(n log n); the sum and XOR versions are O(n) / O(1)
 Solved:      2026-09-16
 
 Key insight
+    "Array of 0..n with one missing" is a family: the usual answers are a
+    sum formula, XOR, or using each value as an index.
+
     The range [0, n] holds n + 1 numbers, but the array has only n slots, so
     exactly one is left out.
 
