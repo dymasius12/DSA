@@ -20,6 +20,7 @@ problems.
 
 | # | Problem | Difficulty | Module | Pattern |
 |---|---|---|---|---|
+| 2216 | [Minimum Deletions to Make Array Beautiful](15_greedy/2216_minimum_deletions_to_make_array_beautiful.py) | 🟡 Medium | 15 Greedy | greedy pairing · *extra, not Blind 75* |
 | 21 | [Merge Two Sorted Lists](06_linked_list/0021_merge_two_sorted_lists.py) | 🟢 Easy | 06 Linked List | dummy head + tail pointer |
 | 268 | [Missing Number](17_bit_manipulation/0268_missing_number.py) | 🟢 Easy | 17 Bit Manipulation | sort+index, sum, XOR |
 | 121 | [Best Time to Buy and Sell Stock](03_sliding_window/0121_best_time_to_buy_and_sell_stock.py) | 🟢 Easy | 03 Sliding Window | running minimum |

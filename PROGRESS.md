@@ -30,7 +30,7 @@ topics were fun.
 | 12 | Advanced Graphs | todo | - | 1 |
 | 13 | 1-D DP | todo | - | 1 |
 | 14 | 2-D DP | todo | - | 1 |
-| 15 | Greedy | todo | - | 1 |
+| 15 | Greedy | learning | 2026-09-17 | 1 |
 | 16 | Intervals | todo | - | 1 |
 | 17 | Bit Manipulation | learning | 2026-09-16 | 1 |
 | 18 | Math & Geometry | todo | - | 1 |
@@ -49,6 +49,7 @@ most convincing argument that this is mine and I've been here before.
 
 | Date | What I did | Minutes |
 |------|------------|---------|
+| 2026-09-17 | LeetCode: solved 2216 Minimum Deletions to Make Array Beautiful (greedy, extra) |  |
 | 2026-09-17 | LeetCode: solved 21 Merge Two Sorted Lists (dummy head + tail) |  |
 | 2026-09-16 | Wrote up why 'return n' is always right (268 Missing Number) |  |
 | 2026-09-16 | LeetCode: solved 268 Missing Number (sort+index; also sum and XOR) |  |
