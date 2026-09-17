@@ -21,7 +21,7 @@ topics were fun.
 | 03 | Sliding Window | learning | 2026-09-15 | 1 |
 | 04 | Stack | todo | - | 1 |
 | 05 | Binary Search | todo | - | 1 |
-| 06 | Linked List | learning | 2026-09-13 | 1 |
+| 06 | Linked List | learning | 2026-09-17 | 1 |
 | 07 | Trees | todo | - | 1 |
 | 08 | Tries | todo | - | 1 |
 | 09 | Heap | todo | - | 1 |
@@ -49,6 +49,7 @@ most convincing argument that this is mine and I've been here before.
 
 | Date | What I did | Minutes |
 |------|------------|---------|
+| 2026-09-17 | LeetCode: solved 21 Merge Two Sorted Lists (dummy head + tail) |  |
 | 2026-09-16 | Wrote up why 'return n' is always right (268 Missing Number) |  |
 | 2026-09-16 | LeetCode: solved 268 Missing Number (sort+index; also sum and XOR) |  |
 | 2026-09-15 | LeetCode: solved 121 Best Time to Buy and Sell Stock (running minimum) |  |

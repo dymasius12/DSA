@@ -20,6 +20,7 @@ problems.
 
 | # | Problem | Difficulty | Module | Pattern |
 |---|---|---|---|---|
+| 21 | [Merge Two Sorted Lists](06_linked_list/0021_merge_two_sorted_lists.py) | 🟢 Easy | 06 Linked List | dummy head + tail pointer |
 | 268 | [Missing Number](17_bit_manipulation/0268_missing_number.py) | 🟢 Easy | 17 Bit Manipulation | sort+index, sum, XOR |
 | 121 | [Best Time to Buy and Sell Stock](03_sliding_window/0121_best_time_to_buy_and_sell_stock.py) | 🟢 Easy | 03 Sliding Window | running minimum |
 | 242 | [Valid Anagram](01_arrays_hashing/0242_valid_anagram.py) | 🟢 Easy | 01 Arrays & Hashing | counting (frequency array) |

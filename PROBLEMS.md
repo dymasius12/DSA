@@ -50,7 +50,7 @@ the *how*. Tick things off here as they get solved.
 ## `06` Linked List  <sub>(6)</sub>
 
 - [ ] 🟢 Reverse Linked List
-- [ ] 🟢 Merge Two Sorted Lists
+- [x] 🟢 Merge Two Sorted Lists · [my solution](leetcode/06_linked_list/0021_merge_two_sorted_lists.py)
 - [ ] 🟡 Reorder List
 - [ ] 🟡 Remove Nth Node From End of List
 - [x] 🟢 Linked List Cycle · [my solution](leetcode/06_linked_list/0141_linked_list_cycle.py)
