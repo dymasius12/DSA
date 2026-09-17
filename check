@@ -1,17 +1,49 @@
 #!/usr/bin/env bash
-# ./check            -> all tests
-# ./check 01         -> module 01 only
-# ./check 01 two_sum -> one problem
+# Practice
+#   ./check                 test your stubs in problems/ (they fail until you fill them in)
+#   ./check 01              one module
+#   ./check 01 two_sum      one problem
+# Verify the repo
+#   ./check solutions       run the same tests against the reference solutions/
+#   ./check leetcode        run every written-up solution in leetcode/
+#   ./check all             solutions + leetcode + indexes up to date (what CI runs)
 set -u
 cd "$(dirname "$0")"
-if [ $# -eq 0 ]; then
-  exec python3 -m pytest
-elif [ $# -eq 1 ]; then
-  f=$(ls tests/test_$1_*.py 2>/dev/null | head -1)
-  [ -z "$f" ] && { echo "no test file for module $1"; exit 1; }
-  exec python3 -m pytest "$f"
-else
-  f=$(ls tests/test_$1_*.py 2>/dev/null | head -1)
-  [ -z "$f" ] && { echo "no test file for module $1"; exit 1; }
-  exec python3 -m pytest "$f" -k "$2"
-fi
+
+run_leetcode() {
+  local failed=0 f out
+  for f in leetcode/*/[0-9]*.py; do
+    if out=$(python3 "$f" 2>&1); then
+      printf "  ok    %s\n" "$f"
+    else
+      printf "  FAIL  %s\n%s\n" "$f" "$out"
+      failed=1
+    fi
+  done
+  return $failed
+}
+
+case "${1:-}" in
+  "")        exec python3 -m pytest ;;
+  solutions) DSA_TARGET=solutions exec python3 -m pytest ;;
+  leetcode)  run_leetcode ;;
+  all)
+    status=0
+    echo "== reference solutions ==";  DSA_TARGET=solutions python3 -m pytest || status=1
+    echo "== leetcode/ solutions ==";  run_leetcode || status=1
+    echo "== generated indexes ==";    python3 tools/sync.py --check || status=1
+    if [ $status -eq 0 ]; then echo "all checks passed"; else echo "SOME CHECKS FAILED"; fi
+    exit $status ;;
+  -h|--help|help)
+    sed -n '2,9p' "$0" | sed 's/^# \{0,1\}//'
+    exit 0 ;;
+  *)
+    f=$(ls tests/test_"$1"_*.py 2>/dev/null | head -1)
+    [ -z "$f" ] && { echo "no tests for module '$1' (see ./check --help)"; exit 1; }
+    if [ $# -ge 2 ]; then
+      # two_sum -> also match the test class TestTwoSum
+      camel=$(python3 -c 'import sys; print("".join(w.title() for w in sys.argv[1].split("_")))' "$2")
+      exec python3 -m pytest "$f" -k "$2 or $camel"
+    fi
+    exec python3 -m pytest "$f" ;;
+esac

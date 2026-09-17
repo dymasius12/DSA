@@ -1,7 +1,15 @@
+import importlib
+import os
+
 import pytest
-from problems.m00_foundations.warmups import (
-    char_frequency, has_duplicate, group_by_first_letter, make_grid,
-)
+
+# ./check runs these tests against your stubs in problems/.
+# ./check solutions runs the same tests against the reference solutions/.
+_impl = importlib.import_module(os.environ.get("DSA_TARGET", "problems") + ".m00_foundations.warmups")
+char_frequency = _impl.char_frequency
+has_duplicate = _impl.has_duplicate
+group_by_first_letter = _impl.group_by_first_letter
+make_grid = _impl.make_grid
 
 
 class TestCharFrequency:

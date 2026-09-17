@@ -2,7 +2,9 @@
 # ./log "did module 01 two_sum + group_anagrams" 45
 set -eu
 cd "$(dirname "$0")"
-[ $# -lt 1 ] && { echo 'usage: ./log "what I did" [minutes]'; exit 1; }
+usage() { echo 'usage: ./log "what I did" [minutes]'; }
+[ $# -lt 1 ] && { usage; exit 1; }
+case "$1" in -*) usage; exit 0 ;; esac
 what="$1"; mins="${2:-}"
 today=$(date +%Y-%m-%d)
 # Insert after the session-log table header separator.

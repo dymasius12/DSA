@@ -1,10 +1,22 @@
 import random
+import importlib
+import os
+
 import pytest
-from problems.m01_arrays_hashing.arrays_hashing import (
-    contains_duplicate, is_anagram, two_sum, group_anagrams,
-    top_k_frequent, product_except_self, longest_consecutive, is_valid_sudoku,
-    encode, decode,
-)
+
+# ./check runs these tests against your stubs in problems/.
+# ./check solutions runs the same tests against the reference solutions/.
+_impl = importlib.import_module(os.environ.get("DSA_TARGET", "problems") + ".m01_arrays_hashing.arrays_hashing")
+contains_duplicate = _impl.contains_duplicate
+is_anagram = _impl.is_anagram
+two_sum = _impl.two_sum
+group_anagrams = _impl.group_anagrams
+top_k_frequent = _impl.top_k_frequent
+product_except_self = _impl.product_except_self
+longest_consecutive = _impl.longest_consecutive
+is_valid_sudoku = _impl.is_valid_sudoku
+encode = _impl.encode
+decode = _impl.decode
 
 
 def norm_groups(groups):
@@ -180,7 +192,7 @@ VALID = make_board([
 ])
 
 
-class TestValidSudoku:
+class TestIsValidSudoku:
     def test_valid(self):
         assert is_valid_sudoku([row[:] for row in VALID]) is True
 
