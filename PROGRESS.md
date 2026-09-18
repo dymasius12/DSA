@@ -18,7 +18,7 @@ topics were fun.
 | 00 | Foundations | todo | - | 1 |
 | 01 | Arrays & Hashing | learning | 2026-09-14 | 1 |
 | 02 | Two Pointers | learning | 2026-09-11 | 1 |
-| 03 | Sliding Window | learning | 2026-09-15 | 1 |
+| 03 | Sliding Window | learning | 2026-09-18 | 1 |
 | 04 | Stack | todo | - | 1 |
 | 05 | Binary Search | todo | - | 1 |
 | 06 | Linked List | learning | 2026-09-17 | 1 |
@@ -49,6 +49,7 @@ most convincing argument that this is mine and I've been here before.
 
 | Date | What I did | Minutes |
 |------|------------|---------|
+| 2026-09-18 | LeetCode: solved 28 Find the Index of the First Occurrence (sliding window, extra) |  |
 | 2026-09-17 | LeetCode: solved 2216 Minimum Deletions to Make Array Beautiful (greedy, extra) |  |
 | 2026-09-17 | LeetCode: solved 21 Merge Two Sorted Lists (dummy head + tail) |  |
 | 2026-09-16 | Wrote up why 'return n' is always right (268 Missing Number) |  |

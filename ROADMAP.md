@@ -51,7 +51,7 @@ Two things the graph shows that a flat list doesn't:
 | 00 | Foundations | Big-O, and the Python toolkit you need | — | [notes](notes/00_foundations.md) · [cheatsheet](cheatsheets/00_complexity.md) · [practice](problems/m00_foundations/) |
 | 01 | Arrays & Hashing | Trade memory for time with a dict or set | 2 / 8 | [notes](notes/01_arrays_hashing.md) · [cheatsheet](cheatsheets/01_arrays_hashing.md) · [practice](problems/m01_arrays_hashing/) · [1 write-up](leetcode/01_arrays_hashing/) |
 | 02 | Two Pointers | Two indices walking toward each other | 1 / 3 |  |
-| 03 | Sliding Window | A contiguous range that grows and shrinks | 1 / 4 | [1 write-up](leetcode/03_sliding_window/) |
+| 03 | Sliding Window | A contiguous range that grows and shrinks | 1 / 4 | [2 write-ups](leetcode/03_sliding_window/) |
 | 04 | Stack | Last in, first out: match the previous thing | 0 / 1 |  |
 | 05 | Binary Search | Halve the search space every step | 0 / 2 |  |
 | 06 | Linked List | Pointer surgery; fast and slow pointers | 2 / 6 | [2 write-ups](leetcode/06_linked_list/) |
