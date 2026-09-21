@@ -55,7 +55,7 @@ Two things the graph shows that a flat list doesn't:
 | 04 | Stack | Last in, first out: match the previous thing | 0 / 1 |  |
 | 05 | Binary Search | Halve the search space every step | 0 / 2 |  |
 | 06 | Linked List | Pointer surgery; fast and slow pointers | 2 / 6 | [2 write-ups](leetcode/06_linked_list/) |
-| 07 | Trees | Recursion on two children | 0 / 11 |  |
+| 07 | Trees | Recursion on two children | 1 / 11 | [1 write-up](leetcode/07_trees/) |
 | 08 | Tries | A tree keyed by characters | 0 / 3 |  |
 | 09 | Heap / Priority Queue | Always pull the smallest or largest next | 0 / 1 |  |
 | 10 | Backtracking | Try, recurse, undo | 0 / 2 |  |

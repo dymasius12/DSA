@@ -6,7 +6,7 @@ The **Blind 75**, the best-known curated list of interview problems, grouped
 by this repo's modules. Every ID, title, link, and difficulty is checked
 against LeetCode (`python3 tools/verify_catalog.py`).
 
-**Solved 7 / 75** `██░░░░░░░░░░░░░░░░░░` 9%  ·  🟢 7/19  ·  🟡 0/49  ·  🔴 0/7
+**Solved 8 / 75** `██░░░░░░░░░░░░░░░░░░` 11%  ·  🟢 8/19  ·  🟡 0/49  ·  🔴 0/7
 
 | Mark | Meaning |
 |:-:|---|
@@ -72,12 +72,12 @@ After the Blind 75, the natural next list is the **NeetCode 150**: the same
 | ✅ | 141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | 🟢 Easy | 📝 [my solution](leetcode/06_linked_list/0141_linked_list_cycle.py) |
 |  | 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | 🔴 Hard |  |
 
-## 07 · Trees  <sub>0 / 11</sub>
+## 07 · Trees  <sub>1 / 11</sub>
 
 | | # | Problem | Difficulty | In this repo |
 |:-:|--:|---|---|---|
 |  | 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | 🟢 Easy |  |
-|  | 104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | 🟢 Easy |  |
+| ✅ | 104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | 🟢 Easy | 📝 [my solution](leetcode/07_trees/0104_maximum_depth_of_binary_tree.py) |
 |  | 100 | [Same Tree](https://leetcode.com/problems/same-tree/) | 🟢 Easy |  |
 |  | 572 | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | 🟢 Easy |  |
 |  | 235 | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | 🟡 Medium |  |

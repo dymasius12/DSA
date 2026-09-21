@@ -34,6 +34,7 @@ revisit in [`../cheatsheets/_patterns.md`](../cheatsheets/_patterns.md).
 | 121 | [Best Time to Buy and Sell Stock](03_sliding_window/0121_best_time_to_buy_and_sell_stock.py) | 🟢 Easy | 03 Sliding Window | running minimum (a sliding window pinned at the cheapest day) | Blind 75 | 2026-09-15 |
 | 21 | [Merge Two Sorted Lists](06_linked_list/0021_merge_two_sorted_lists.py) | 🟢 Easy | 06 Linked List | dummy head + tail pointer (the standard way to build a linked list) | Blind 75 | 2026-09-17 |
 | 141 | [Linked List Cycle](06_linked_list/0141_linked_list_cycle.py) | 🟢 Easy | 06 Linked List | fast & slow pointers (Floyd's tortoise and hare) | Blind 75 | 2026-09-13 |
+| 104 | [Maximum Depth of Binary Tree](07_trees/0104_maximum_depth_of_binary_tree.py) | 🟢 Easy | 07 Trees | tree DFS (recursion: 1 + max of the two children) | Blind 75 | 2026-09-21 |
 | 2216 | [Minimum Deletions to Make Array Beautiful](15_greedy/2216_minimum_deletions_to_make_array_beautiful.py) | 🟡 Medium | 15 Greedy | greedy: pair each number with the first different number after it | extra | 2026-09-17 |
 | 268 | [Missing Number](17_bit_manipulation/0268_missing_number.py) | 🟢 Easy | 17 Bit Manipulation | sum formula or XOR (sorting works, but isn't the intended answer) | Blind 75 | 2026-09-16 |
 <!-- index:end -->
