@@ -30,6 +30,7 @@ revisit in [`../cheatsheets/_patterns.md`](../cheatsheets/_patterns.md).
 | # | Problem | Difficulty | Module | Pattern | List | Solved |
 |--:|---|---|---|---|---|---|
 | 242 | [Valid Anagram](01_arrays_hashing/0242_valid_anagram.py) | 🟢 Easy | 01 Arrays & Hashing | counting (frequency array) | Blind 75 | 2026-09-14 |
+| 1480 | [Running Sum of 1d Array](01_arrays_hashing/1480_running_sum_of_1d_array.py) | 🟢 Easy | 01 Arrays & Hashing | prefix sum (each total = the previous total + this number) | extra | 2026-09-22 |
 | 28 | [Find the Index of the First Occurrence in a String](03_sliding_window/0028_find_the_index_of_the_first_occurrence_in_a_string.py) | 🟢 Easy | 03 Sliding Window | fixed-size sliding window (compare each window with needle) | extra | 2026-09-18 |
 | 121 | [Best Time to Buy and Sell Stock](03_sliding_window/0121_best_time_to_buy_and_sell_stock.py) | 🟢 Easy | 03 Sliding Window | running minimum (a sliding window pinned at the cheapest day) | Blind 75 | 2026-09-15 |
 | 21 | [Merge Two Sorted Lists](06_linked_list/0021_merge_two_sorted_lists.py) | 🟢 Easy | 06 Linked List | dummy head + tail pointer (the standard way to build a linked list) | Blind 75 | 2026-09-17 |

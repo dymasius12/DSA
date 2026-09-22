@@ -187,6 +187,7 @@ After the Blind 75, the natural next list is the **NeetCode 150**: the same
 
 | | # | Problem | Difficulty | In this repo |
 |:-:|--:|---|---|---|
+| ✅ | 1480 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) | 🟢 Easy | 📝 [my solution](leetcode/01_arrays_hashing/1480_running_sum_of_1d_array.py) |
 | ✅ | 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | 🟢 Easy | 📝 [my solution](leetcode/03_sliding_window/0028_find_the_index_of_the_first_occurrence_in_a_string.py) |
 | ✅ | 2216 | [Minimum Deletions to Make Array Beautiful](https://leetcode.com/problems/minimum-deletions-to-make-array-beautiful/) | 🟡 Medium | 📝 [my solution](leetcode/15_greedy/2216_minimum_deletions_to_make_array_beautiful.py) |
 
