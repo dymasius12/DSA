@@ -16,7 +16,7 @@ topics were fun.
 | # | Module | Status | Last touched | Confidence |
 |---|--------|--------|--------------|------------|
 | 00 | Foundations | todo | - | 1 |
-| 01 | Arrays & Hashing | learning | 2026-09-22 | 1 |
+| 01 | Arrays & Hashing | learning | 2026-09-24 | 1 |
 | 02 | Two Pointers | learning | 2026-09-11 | 1 |
 | 03 | Sliding Window | learning | 2026-09-18 | 1 |
 | 04 | Stack | todo | - | 1 |
@@ -32,8 +32,8 @@ topics were fun.
 | 14 | 2-D DP | todo | - | 1 |
 | 15 | Greedy | learning | 2026-09-17 | 1 |
 | 16 | Intervals | todo | - | 1 |
-| 17 | Bit Manipulation | learning | 2026-09-16 | 1 |
-| 18 | Math & Geometry | todo | - | 1 |
+| 17 | Bit Manipulation | learning | 2026-09-24 | 1 |
+| 18 | Math & Geometry | learning | 2026-09-24 | 1 |
 
 Status: `todo` · `learning` · `done` · `solid`
 
@@ -49,6 +49,7 @@ most convincing argument that this is mine and I've been here before.
 
 | Date | What I did | Minutes |
 |------|------------|---------|
+| 2026-09-24 | LeetCode: solved 1672 Richest Customer Wealth, 412 Fizz Buzz, 1342 Steps to Reduce to Zero |  |
 | 2026-09-22 | LeetCode: solved 1480 Running Sum of 1d Array (prefix sum, extra) |  |
 | 2026-09-21 | LeetCode: solved 104 Maximum Depth of Binary Tree (tree DFS) |  |
 | 2026-09-18 | LeetCode: solved 28 Find the Index of the First Occurrence (sliding window, extra) |  |

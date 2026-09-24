@@ -31,6 +31,7 @@ revisit in [`../cheatsheets/_patterns.md`](../cheatsheets/_patterns.md).
 |--:|---|---|---|---|---|---|
 | 242 | [Valid Anagram](01_arrays_hashing/0242_valid_anagram.py) | 🟢 Easy | 01 Arrays & Hashing | counting (frequency array) | Blind 75 | 2026-09-14 |
 | 1480 | [Running Sum of 1d Array](01_arrays_hashing/1480_running_sum_of_1d_array.py) | 🟢 Easy | 01 Arrays & Hashing | prefix sum (each total = the previous total + this number) | extra | 2026-09-22 |
+| 1672 | [Richest Customer Wealth](01_arrays_hashing/1672_richest_customer_wealth.py) | 🟢 Easy | 01 Arrays & Hashing | nested loop over a grid, keeping a running maximum | extra | 2026-09-24 |
 | 28 | [Find the Index of the First Occurrence in a String](03_sliding_window/0028_find_the_index_of_the_first_occurrence_in_a_string.py) | 🟢 Easy | 03 Sliding Window | fixed-size sliding window (compare each window with needle) | extra | 2026-09-18 |
 | 121 | [Best Time to Buy and Sell Stock](03_sliding_window/0121_best_time_to_buy_and_sell_stock.py) | 🟢 Easy | 03 Sliding Window | running minimum (a sliding window pinned at the cheapest day) | Blind 75 | 2026-09-15 |
 | 21 | [Merge Two Sorted Lists](06_linked_list/0021_merge_two_sorted_lists.py) | 🟢 Easy | 06 Linked List | dummy head + tail pointer (the standard way to build a linked list) | Blind 75 | 2026-09-17 |
@@ -38,6 +39,8 @@ revisit in [`../cheatsheets/_patterns.md`](../cheatsheets/_patterns.md).
 | 104 | [Maximum Depth of Binary Tree](07_trees/0104_maximum_depth_of_binary_tree.py) | 🟢 Easy | 07 Trees | tree DFS (recursion: 1 + max of the two children) | Blind 75 | 2026-09-21 |
 | 2216 | [Minimum Deletions to Make Array Beautiful](15_greedy/2216_minimum_deletions_to_make_array_beautiful.py) | 🟡 Medium | 15 Greedy | greedy: pair each number with the first different number after it | extra | 2026-09-17 |
 | 268 | [Missing Number](17_bit_manipulation/0268_missing_number.py) | 🟢 Easy | 17 Bit Manipulation | sum formula or XOR (sorting works, but isn't the intended answer) | Blind 75 | 2026-09-16 |
+| 1342 | [Number of Steps to Reduce a Number to Zero](17_bit_manipulation/1342_number_of_steps_to_reduce_a_number_to_zero.py) | 🟢 Easy | 17 Bit Manipulation | simulation loop (and, underneath, binary digits) | extra | 2026-09-24 |
+| 412 | [Fizz Buzz](18_math_geometry/0412_fizz_buzz.py) | 🟢 Easy | 18 Math & Geometry | simulation with ordered if/elif conditions | extra | 2026-09-24 |
 <!-- index:end -->
 
 ## Adding a new one

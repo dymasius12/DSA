@@ -188,7 +188,10 @@ After the Blind 75, the natural next list is the **NeetCode 150**: the same
 | | # | Problem | Difficulty | In this repo |
 |:-:|--:|---|---|---|
 | ✅ | 1480 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) | 🟢 Easy | 📝 [my solution](leetcode/01_arrays_hashing/1480_running_sum_of_1d_array.py) |
+| ✅ | 1672 | [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) | 🟢 Easy | 📝 [my solution](leetcode/01_arrays_hashing/1672_richest_customer_wealth.py) |
 | ✅ | 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | 🟢 Easy | 📝 [my solution](leetcode/03_sliding_window/0028_find_the_index_of_the_first_occurrence_in_a_string.py) |
 | ✅ | 2216 | [Minimum Deletions to Make Array Beautiful](https://leetcode.com/problems/minimum-deletions-to-make-array-beautiful/) | 🟡 Medium | 📝 [my solution](leetcode/15_greedy/2216_minimum_deletions_to_make_array_beautiful.py) |
+| ✅ | 1342 | [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/) | 🟢 Easy | 📝 [my solution](leetcode/17_bit_manipulation/1342_number_of_steps_to_reduce_a_number_to_zero.py) |
+| ✅ | 412 | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) | 🟢 Easy | 📝 [my solution](leetcode/18_math_geometry/0412_fizz_buzz.py) |
 
 [← back to the repo](README.md)

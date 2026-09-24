@@ -37,7 +37,7 @@ productive again in an hour, not a month.
 | Written up with review notes | 6 | 0 | 0 | **6** |
 | Practice stubs with tests | 3 | 5 | 0 | **8** |
 
-Plus 3 extra problems outside the Blind 75, in [`leetcode/`](leetcode/).
+Plus 6 extra problems outside the Blind 75, in [`leetcode/`](leetcode/).
 <!-- progress:end -->
 
 Per-topic confidence and the session log live in [PROGRESS.md](PROGRESS.md).

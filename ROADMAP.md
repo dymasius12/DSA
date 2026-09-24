@@ -49,7 +49,7 @@ Two things the graph shows that a flat list doesn't:
 | # | Module | The pattern, in one line | Blind 75 solved | In this repo |
 |---|---|---|--:|---|
 | 00 | Foundations | Big-O, and the Python toolkit you need | — | [notes](notes/00_foundations.md) · [cheatsheet](cheatsheets/00_complexity.md) · [practice](problems/m00_foundations/) |
-| 01 | Arrays & Hashing | Trade memory for time with a dict or set | 2 / 8 | [notes](notes/01_arrays_hashing.md) · [cheatsheet](cheatsheets/01_arrays_hashing.md) · [practice](problems/m01_arrays_hashing/) · [2 write-ups](leetcode/01_arrays_hashing/) |
+| 01 | Arrays & Hashing | Trade memory for time with a dict or set | 2 / 8 | [notes](notes/01_arrays_hashing.md) · [cheatsheet](cheatsheets/01_arrays_hashing.md) · [practice](problems/m01_arrays_hashing/) · [3 write-ups](leetcode/01_arrays_hashing/) |
 | 02 | Two Pointers | Two indices walking toward each other | 1 / 3 |  |
 | 03 | Sliding Window | A contiguous range that grows and shrinks | 1 / 4 | [2 write-ups](leetcode/03_sliding_window/) |
 | 04 | Stack | Last in, first out: match the previous thing | 0 / 1 |  |
@@ -65,8 +65,8 @@ Two things the graph shows that a flat list doesn't:
 | 14 | 2-D Dynamic Programming | Cache over a grid of subproblems | 0 / 2 |  |
 | 15 | Greedy | Take the locally best choice, and prove it | 0 / 2 | [1 write-up](leetcode/15_greedy/) |
 | 16 | Intervals | Sort by start, then merge or count | 0 / 5 |  |
-| 17 | Bit Manipulation | XOR, masks, and counting bits | 1 / 5 | [1 write-up](leetcode/17_bit_manipulation/) |
-| 18 | Math & Geometry | Index arithmetic on a matrix: rotate, spiral, in place | 0 / 3 |  |
+| 17 | Bit Manipulation | XOR, masks, and counting bits | 1 / 5 | [2 write-ups](leetcode/17_bit_manipulation/) |
+| 18 | Math & Geometry | Index arithmetic on a matrix: rotate, spiral, in place | 0 / 3 | [1 write-up](leetcode/18_math_geometry/) |
 <!-- modules:end -->
 
 Modules get their notes, cheatsheet, and practice stubs as they're reached,

@@ -56,6 +56,8 @@ class Solution:
 # ----------------------------------- tests ------------------------------------
 
 if __name__ == "__main__":
+    # Test three shapes: the normal case, the smallest or empty case, and the
+    # edge case named in the problem's examples.
     cases = [
         # (name, input, expected)
         ("example 1", [1, 2, 3], 0),
