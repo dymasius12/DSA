@@ -193,5 +193,6 @@ After the Blind 75, the natural next list is the **NeetCode 150**: the same
 | ✅ | 2216 | [Minimum Deletions to Make Array Beautiful](https://leetcode.com/problems/minimum-deletions-to-make-array-beautiful/) | 🟡 Medium | 📝 [my solution](leetcode/15_greedy/2216_minimum_deletions_to_make_array_beautiful.py) |
 | ✅ | 1342 | [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/) | 🟢 Easy | 📝 [my solution](leetcode/17_bit_manipulation/1342_number_of_steps_to_reduce_a_number_to_zero.py) |
 | ✅ | 412 | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) | 🟢 Easy | 📝 [my solution](leetcode/18_math_geometry/0412_fizz_buzz.py) |
+| ✅ | 1071 | [Greatest Common Divisor of Strings](https://leetcode.com/problems/greatest-common-divisor-of-strings/) | 🟢 Easy | 📝 [my solution](leetcode/18_math_geometry/1071_greatest_common_divisor_of_strings.py) |
 
 [← back to the repo](README.md)

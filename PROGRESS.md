@@ -33,7 +33,7 @@ topics were fun.
 | 15 | Greedy | learning | 2026-09-17 | 1 |
 | 16 | Intervals | todo | - | 1 |
 | 17 | Bit Manipulation | learning | 2026-09-24 | 1 |
-| 18 | Math & Geometry | learning | 2026-09-24 | 1 |
+| 18 | Math & Geometry | learning | 2026-10-06 | 1 |
 
 Status: `todo` · `learning` · `done` · `solid`
 
@@ -49,6 +49,7 @@ most convincing argument that this is mine and I've been here before.
 
 | Date | What I did | Minutes |
 |------|------------|---------|
+| 2026-10-06 | LeetCode: solved 1071 Greatest Common Divisor of Strings (glue test + gcd) |  |
 | 2026-09-24 | LeetCode: solved 1672 Richest Customer Wealth, 412 Fizz Buzz, 1342 Steps to Reduce to Zero |  |
 | 2026-09-22 | LeetCode: solved 1480 Running Sum of 1d Array (prefix sum, extra) |  |
 | 2026-09-21 | LeetCode: solved 104 Maximum Depth of Binary Tree (tree DFS) |  |

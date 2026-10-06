@@ -41,6 +41,7 @@ revisit in [`../cheatsheets/_patterns.md`](../cheatsheets/_patterns.md).
 | 268 | [Missing Number](17_bit_manipulation/0268_missing_number.py) | 🟢 Easy | 17 Bit Manipulation | sum formula or XOR (sorting works, but isn't the intended answer) | Blind 75 | 2026-09-16 |
 | 1342 | [Number of Steps to Reduce a Number to Zero](17_bit_manipulation/1342_number_of_steps_to_reduce_a_number_to_zero.py) | 🟢 Easy | 17 Bit Manipulation | simulation loop (and, underneath, binary digits) | extra | 2026-09-24 |
 | 412 | [Fizz Buzz](18_math_geometry/0412_fizz_buzz.py) | 🟢 Easy | 18 Math & Geometry | simulation with ordered if/elif conditions | extra | 2026-09-24 |
+| 1071 | [Greatest Common Divisor of Strings](18_math_geometry/1071_greatest_common_divisor_of_strings.py) | 🟢 Easy | 18 Math & Geometry | string periodicity + gcd of the lengths | extra | 2026-10-06 |
 <!-- index:end -->
 
 ## Adding a new one
