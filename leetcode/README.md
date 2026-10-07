@@ -30,6 +30,7 @@ revisit in [`../cheatsheets/_patterns.md`](../cheatsheets/_patterns.md).
 | # | Problem | Difficulty | Module | Pattern | List | Solved |
 |--:|---|---|---|---|---|---|
 | 242 | [Valid Anagram](01_arrays_hashing/0242_valid_anagram.py) | 🟢 Easy | 01 Arrays & Hashing | counting (frequency array) | Blind 75 | 2026-09-14 |
+| 1431 | [Kids With the Greatest Number of Candies](01_arrays_hashing/1431_kids_with_the_greatest_number_of_candies.py) | 🟢 Easy | 01 Arrays & Hashing | precompute one value, then a single pass | extra | 2026-10-07 |
 | 1480 | [Running Sum of 1d Array](01_arrays_hashing/1480_running_sum_of_1d_array.py) | 🟢 Easy | 01 Arrays & Hashing | prefix sum (each total = the previous total + this number) | extra | 2026-09-22 |
 | 1672 | [Richest Customer Wealth](01_arrays_hashing/1672_richest_customer_wealth.py) | 🟢 Easy | 01 Arrays & Hashing | nested loop over a grid, keeping a running maximum | extra | 2026-09-24 |
 | 28 | [Find the Index of the First Occurrence in a String](03_sliding_window/0028_find_the_index_of_the_first_occurrence_in_a_string.py) | 🟢 Easy | 03 Sliding Window | fixed-size sliding window (compare each window with needle) | extra | 2026-09-18 |

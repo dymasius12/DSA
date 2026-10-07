@@ -16,7 +16,7 @@ topics were fun.
 | # | Module | Status | Last touched | Confidence |
 |---|--------|--------|--------------|------------|
 | 00 | Foundations | todo | - | 1 |
-| 01 | Arrays & Hashing | learning | 2026-09-24 | 1 |
+| 01 | Arrays & Hashing | learning | 2026-10-07 | 1 |
 | 02 | Two Pointers | learning | 2026-09-11 | 1 |
 | 03 | Sliding Window | learning | 2026-09-18 | 1 |
 | 04 | Stack | todo | - | 1 |
@@ -49,6 +49,7 @@ most convincing argument that this is mine and I've been here before.
 
 | Date | What I did | Minutes |
 |------|------------|---------|
+| 2026-10-07 | LeetCode: solved 1431 Kids With the Greatest Number of Candies |  |
 | 2026-10-06 | LeetCode: solved 1071 Greatest Common Divisor of Strings (glue test + gcd) |  |
 | 2026-09-24 | LeetCode: solved 1672 Richest Customer Wealth, 412 Fizz Buzz, 1342 Steps to Reduce to Zero |  |
 | 2026-09-22 | LeetCode: solved 1480 Running Sum of 1d Array (prefix sum, extra) |  |

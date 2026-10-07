@@ -187,6 +187,7 @@ After the Blind 75, the natural next list is the **NeetCode 150**: the same
 
 | | # | Problem | Difficulty | In this repo |
 |:-:|--:|---|---|---|
+| ✅ | 1431 | [Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/) | 🟢 Easy | 📝 [my solution](leetcode/01_arrays_hashing/1431_kids_with_the_greatest_number_of_candies.py) |
 | ✅ | 1480 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) | 🟢 Easy | 📝 [my solution](leetcode/01_arrays_hashing/1480_running_sum_of_1d_array.py) |
 | ✅ | 1672 | [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) | 🟢 Easy | 📝 [my solution](leetcode/01_arrays_hashing/1672_richest_customer_wealth.py) |
 | ✅ | 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | 🟢 Easy | 📝 [my solution](leetcode/03_sliding_window/0028_find_the_index_of_the_first_occurrence_in_a_string.py) |
