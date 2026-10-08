@@ -63,7 +63,7 @@ Two things the graph shows that a flat list doesn't:
 | 12 | Advanced Graphs | Dijkstra, topological sort, union-find | 0 / 1 |  |
 | 13 | 1-D Dynamic Programming | Cache the answer to a smaller version | 0 / 10 |  |
 | 14 | 2-D Dynamic Programming | Cache over a grid of subproblems | 0 / 2 |  |
-| 15 | Greedy | Take the locally best choice, and prove it | 0 / 2 | [1 write-up](leetcode/15_greedy/) |
+| 15 | Greedy | Take the locally best choice, and prove it | 0 / 2 | [2 write-ups](leetcode/15_greedy/) |
 | 16 | Intervals | Sort by start, then merge or count | 0 / 5 |  |
 | 17 | Bit Manipulation | XOR, masks, and counting bits | 1 / 5 | [2 write-ups](leetcode/17_bit_manipulation/) |
 | 18 | Math & Geometry | Index arithmetic on a matrix: rotate, spiral, in place | 0 / 3 | [2 write-ups](leetcode/18_math_geometry/) |

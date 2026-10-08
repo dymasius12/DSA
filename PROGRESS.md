@@ -30,7 +30,7 @@ topics were fun.
 | 12 | Advanced Graphs | todo | - | 1 |
 | 13 | 1-D DP | todo | - | 1 |
 | 14 | 2-D DP | todo | - | 1 |
-| 15 | Greedy | learning | 2026-09-17 | 1 |
+| 15 | Greedy | learning | 2026-10-08 | 1 |
 | 16 | Intervals | todo | - | 1 |
 | 17 | Bit Manipulation | learning | 2026-09-24 | 1 |
 | 18 | Math & Geometry | learning | 2026-10-06 | 1 |
@@ -49,6 +49,7 @@ most convincing argument that this is mine and I've been here before.
 
 | Date | What I did | Minutes |
 |------|------------|---------|
+| 2026-10-08 | LeetCode: solved 605 Can Place Flowers (greedy, two versions) |  |
 | 2026-10-07 | LeetCode: solved 1431 Kids With the Greatest Number of Candies |  |
 | 2026-10-06 | LeetCode: solved 1071 Greatest Common Divisor of Strings (glue test + gcd) |  |
 | 2026-09-24 | LeetCode: solved 1672 Richest Customer Wealth, 412 Fizz Buzz, 1342 Steps to Reduce to Zero |  |
